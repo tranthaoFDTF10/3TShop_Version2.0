@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sản phẩm</title>
+    <link rel="stylesheet" href="sanpham.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+    
+<body>
+    <div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo3Tshop.png" width="125px">
+    
+            </div>
+            <nav>
+                <ul>
+                    <li><a class="nav_link" href="index.html">Trang chủ</a></li>
+                    <li><a class="nav_link" href="sanpham.html">Sản phẩm</a></li>
+                    <li><a class="nav_link" href="gioithieu.html">Giới thiệu</a></li>
+                    <li><a class="nav_link" href="lienhe.html">Liên hệ</a></li>
+                    <li><a class="nav_link" href="taikhoan.html">Tài khoản</a></li>
+                </ul>
+            </nav>
+            <img src="images/cart.png" width="30px" height="30px">
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <h2>3T Shop <br>Thời trang thể thao chính hãng</h2>
+                <p>Hãy cho chúng tôi biết bạn cần gì. Chào mừng bạn đến với chúng tôi</p>
+                <a href="" class="btn">Explore Now</a>
+            </div>
+            <div class="col-2">
+                <img src="images/image1.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--Code nội dung vào chỗ trống này-->
+<main class="main">
+    <div class="statistical">
+        <div class="statistical__content">
+            <h1>Thống kê</h1>
+            <p>Dưới đây là các thống kê top các sản phẩm bán chạy nhất tháng vừa rồi của cửa hàng</p>
+        </div>
+        <div class="statistical__items">
+            <div class="statistical__item">
+                <div class="statistical__item__outer">
+                    <div class="statistical__item__inner">
+                        <div id="number1"></div>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                       <linearGradient id="GradientColor">
+                          <stop offset="0%" stop-color="#e91e63" />
+                          <stop offset="100%" stop-color="#673ab7" />
+                       </linearGradient>
+                    </defs>
+                    <circle class="circle1" cx="80" cy="80" r="70" stroke-linecap="round" />
+                </svg>
+                <div class="statistical__item__content">
+                    <img src="images/product/shoe-icon.png" alt="">
+                    <h3>Giày</h3>
+                </div>
+            </div>
+            <div class="statistical__item">
+                <div class="statistical__item__outer">
+                    <div class="statistical__item__inner">
+                        <div id="number2"></div>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                       <linearGradient id="GradientColor">
+                          <stop offset="0%" stop-color="#e91e63" />
+                          <stop offset="100%" stop-color="#673ab7" />
+                       </linearGradient>
+                    </defs>
+                    <circle class="circle2" cx="80" cy="80" r="70" stroke-linecap="round" />
+                </svg>
+                <div class="statistical__item__content">
+                    <img src="images/product/t-shirt-icon.png" alt="">
+                    <h3>Áo T-shirt</h3>
+                </div>
+            </div>
+            <div class="statistical__item">
+                <div class="statistical__item__outer">
+                    <div class="statistical__item__inner">
+                        <div id="number3"></div>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                       <linearGradient id="GradientColor">
+                          <stop offset="0%" stop-color="#e91e63" />
+                          <stop offset="100%" stop-color="#673ab7" />
+                       </linearGradient>
+                    </defs>
+                    <circle class="circle3" cx="80" cy="80" r="70" stroke-linecap="round" />
+                </svg>
+                <div class="statistical__item__content">
+                    <img src="images/product/coat-icon.png" alt="">
+                    <h3>Áo khoát</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="typical-product">
+        <div class="typical-product__content">
+            <h1>Sản phẩm tiêu biểu</h1>
+            <p>Dưới đây là các mẫu sản xuất bán chạy nhất của shop</p>
+        </div>
+        <div class="typical-product__item slider-product">
+            <div class="slider-product__btn--prev">
+                <i class="fa fa-angle-left"></i>
+            </div>
+            <ul class="slider-product__dots">            
+                <li class="slider-product__dot__item active" data-index="0"></li>
+                <li class="slider-product__dot__item" data-index="1"></li>
+                <li class="slider-product__dot__item" data-index="2"></li>
+                <li class="slider-product__dot__item" data-index="3"></li>
+                <li class="slider-product__dot__item" data-index="4"></li>
+            </ul>
+            <div class="slider-product__wrapper">
+                <div class="slider-product__wrapper__main">
+                    <div class="slider-product__wrapper__main__item">
+                        <img src="images/product/shoe5.jpg" alt="">
+                    </div>
+                    <div class="slider-product__wrapper__main__item">
+                        <img src="images/product/shoe6.jpg" alt="">
+                    </div>
+                    <div class="slider-product__wrapper__main__item">
+                        <img src="images/product/shoe7.jpg" alt="">
+                    </div>
+                    <div class="slider-product__wrapper__main__item">
+                        <img src="images/product/shoe8.jpg" alt="">
+                    </div>
+                    <div class="slider-product__wrapper__main__item">
+                        <img src="images/product/shoe9.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="slider-product__btn--next">
+                <i class="fa fa-angle-right"></i>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="all-product">
+        <div class="all-product__content">
+            <h1>Tất cả sản phẩm của shop</h1>
+            <p>Dưới đây là tất cả các sản phẩm của shop với nhiều mẫu mã đa dạng và đảm bảo chất lượng nhất</p>
+        </div>
+        <div class="all-product__big-list big-list">
+            <div class="big-list__sidebar-funnel sidebar-funnel">
+                <div class="sidebar-funnel__nav">
+                    <div class="sidebar-funnel__nav__menu-toggle menu-toggle">
+                    </div>
+                    <div class="menu-toggle__logo">
+                        <div class="menu-toggle__logo__imgBx">
+                            <img src="images/product/3T-no-background.png" alt="">
+                        </div>
+                    </div>
+                    <ul class="menu-toggle__main-menu main-menu">
+                        <li class="li">
+                            <div class="li1">
+                                <span class="icon"><ion-icon name="airplane-outline"></ion-icon></span>
+                                <div class="bxtext">
+                                    <div class="textt">Vận chuyển</div>
+                                    <div class="textt2"><ion-icon name="caret-down-circle-outline"></ion-icon></div>
+                                </div>
+                            </div>
+                            <div class="shipping-unit li2">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox5">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox6">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox7">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox8">
+                                <div class="check">
+                                    <div class="checkbox-1">
+                                        <label for="checkbox5" class="checkbox-btn checkbox-btn5"></label>
+                                        <label for="checkbox6" class="checkbox-btn checkbox-btn6"></label>
+                                        <label for="checkbox7" class="checkbox-btn checkbox-btn7"></label>
+                                        <label for="checkbox8" class="checkbox-btn checkbox-btn8"></label>
+                                    </div>
+                                    <ul class="checkbox-2">
+                                       <li class="checkbox-name">Hỏa tốc</li>
+                                       <li class="checkbox-name">Nhanh</li>
+                                       <li class="checkbox-name">Tiết kiệm</li>
+                                       <li class="checkbox-name">Siêu tiết kiệm</li> 
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li">
+                            <div class="li1">
+                                <span class="icon"><ion-icon name="receipt-outline"></ion-icon></span>
+                                <div class="bxtext">
+                                    <div class="textt">Nơi bán</div>
+                                    <div class="textt2"><ion-icon name="caret-down-circle-outline"></ion-icon></div>
+                                </div>
+                            </div>
+                            <div class="area li2">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox1">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox2">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox3">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox4">
+                                <div class="check">
+                                    <div class="checkbox-1">
+                                        <label for="checkbox1" class="checkbox-btn checkbox-btn1"></label>
+                                        <label for="checkbox2" class="checkbox-btn checkbox-btn2"></label>
+                                        <label for="checkbox3" class="checkbox-btn checkbox-btn3"></label>
+                                        <label for="checkbox4" class="checkbox-btn checkbox-btn4"></label>
+                                    </div>
+                                    <ul class="checkbox-2">
+                                       <li class="checkbox-name">TP. Hồ Chí Minh</li>
+                                       <li class="checkbox-name">Hà Nội</li>
+                                       <li class="checkbox-name">Cần Thơ</li>
+                                       <li class="checkbox-name">Thái Nguyên</li> 
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li">
+                            <div class="li1">
+                                <span class="icon"><ion-icon name="wallet-outline"></ion-icon></ion-icon></span>
+                                <div class="bxtext">
+                                    <div class="textt">Khoảng giá</div>
+                                    <div class="textt2"><ion-icon name="caret-down-circle-outline"></ion-icon></div>
+                                </div>
+                            </div>
+                            <div class="pirce-range li2">
+                                <ul class="text-price">
+                                  <li><input type="text" placeholder="Từ..."></li>
+                                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                  <li><input type="text" placeholder="Đến..."></li>
+                                </ul>
+                                <div class="buy-btn btn-price">Áp dụng</div>
+                            </div>
+                        </li>
+                        <li class="li">
+                            <div class="li1">
+                                <span class="icon"><ion-icon name="card-outline"></ion-icon></span>
+                                <div class="bxtext">
+                                    <div class="textt">Thanh toán</div>
+                                    <div class="textt2"><ion-icon name="caret-down-circle-outline"></ion-icon></div>
+                                </div>
+                            </div>
+                            <div class="pay li2">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox13">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox14">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox15">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox16">
+                                <div class="check">
+                                    <div class="checkbox-1">
+                                        <label for="checkbox13" class="checkbox-btn checkbox-btn13"></label>
+                                        <label for="checkbox14" class="checkbox-btn checkbox-btn14"></label>
+                                        <label for="checkbox15" class="checkbox-btn checkbox-btn15"></label>
+                                        <label for="checkbox16" class="checkbox-btn checkbox-btn16"></label>
+                                    </div>
+                                    <ul class="checkbox-2">
+                                       <li class="checkbox-name">Khi nhận hàng</li>
+                                       <li class="checkbox-name">Qua ví điện tử</li>
+                                       <li class="checkbox-name">Qua ví shoppe</li>
+                                       <li class="checkbox-name">Trả góp 0%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li">
+                            <div class="li1">
+                                <span class="icon"><ion-icon name="storefront-outline"></ion-icon></ion-icon></span>
+                                <div class="bxtext">
+                                    <div class="textt">Loại shop</div>
+                                    <div class="textt2"><ion-icon name="caret-down-circle-outline"></ion-icon></div>
+                                </div>
+                            </div>
+                            <div class="favorite-shop li2">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox9">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox10">
+                                <div class="check">
+                                    <div class="checkbox-1">
+                                        <label for="checkbox9" class="checkbox-btn checkbox-btn9"></label>
+                                        <label for="checkbox10" class="checkbox-btn checkbox-btn10"></label>
+                                    </div>
+                                    <ul class="checkbox-2">
+                                       <li class="checkbox-name">Shop yêu thích</li>
+                                       <li class="checkbox-name">Shopee mall</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li">
+                            <div class="li1">
+                                <span class="icon"><ion-icon name="cube-outline"></ion-icon></ion-icon></span>
+                                <div class="bxtext">
+                                    <div class="textt">Tình trạng</div>
+                                    <div class="textt2"><ion-icon name="caret-down-circle-outline"></ion-icon></div>
+                                </div>
+                            </div>
+                            <div class="state li2">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox11">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox12">
+                                <div class="check">
+                                    <div class="checkbox-1">
+                                        <label for="checkbox11" class="checkbox-btn checkbox-btn11"></label>
+                                        <label for="checkbox12" class="checkbox-btn checkbox-btn12"></label>
+                                    </div>
+                                    <ul class="checkbox-2">
+                                       <li class="checkbox-name">Đã qua sử dụng</li>
+                                       <li class="checkbox-name">Mới</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>  
+            <div class="big-list__types types">
+                <div class="types__shoe types__border types__item">
+                    <h2 class="types__item__name">Shoe</h2>
+                    <div class="types__item__list">
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/shoe1.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Nike ATD4F</h4>
+                                <a href="#" class="details__flashsale">&#8363 1.500.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 2.200.000</span>
+                                    <span class="new-price">&#8363 1.788.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 5,5k</p>
+                                </div>
+                                <div class="details__address">TP. Hồ Chí Minh</div>
+                            </div>
+                        </div>
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/shoe2.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Nike T5RUP</h4>
+                                <a href="#" class="details__flashsale">&#8363 1.000.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 1.700.000</span>
+                                    <span class="new-price">&#8363 1.500.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 1,2k</p>
+                                </div>
+                                <div class="details__address">TP. Hồ Chí Minh</div>
+                            </div>
+                        </div>
+                        <div class="box-product hidden">
+                            <div class="box-product__img">
+                                <img src="images/product/shoe3.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Nike RT56IO</h4>
+                                <a href="#" class="details__flashsale">&#8363 1.200.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 1.800.000</span>
+                                    <span class="new-price">&#8363 1.774.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 523</p>
+                                </div>
+                                <div class="details__address">TP. Hồ Chí Minh</div>
+                            </div>
+                        </div>
+                        <div class="box-product hidden">
+                            <div class="box-product__img">
+                                <img src="images/product/shoe4.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Nike MNI95</h4>
+                                <a href="#" class="details__flashsale">&#8363 1.400.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 1.999.000</span>
+                                    <span class="new-price">&#8363 1.600.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 3,3k</p>
+                                </div>
+                                <div class="details__address">TP. Hồ Chí Minh</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="types-item__more-information">
+                        <a href="see-more-skirt.html" class="buy-btn">Xem thêm</a>
+                    </div>
+                </div>
+
+                <div class="types-sport-clothes types__border types__item">
+                    <h2 class="types__item__name">Sport Clothes</h2>
+                    <div class="types__item__list">
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/sport_clothes1.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Áo thể thao nam TYUI</h4>
+                                <a href="#" class="details__flashsale">&#8363 450.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 979.000</span>
+                                    <span class="new-price">&#8363 665.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 383</p>
+                                </div>
+                                <div class="details__address">Hà nội</div>
+                            </div>
+                        </div>
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/sport_clothes2.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Quần áo thể thao TT</h4>
+                                <a href="#" class="details__flashsale">&#8363 800.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 999.000</span>
+                                    <span class="new-price">&#8363 888.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 700</p>
+                                </div>
+                                <div class="details__address">TP. Hồ Chí Minh</div>
+                            </div>
+                        </div>
+                        <div class="box-product hidden">
+                            <div class="box-product__img">
+                                <img src="images/product/sport_clothes3.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Áo quần thể thao nữ AWA</h4>
+                                <a href="#" class="details__flashsale">&#8363 900.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 1.099.000</span>
+                                    <span class="new-price">&#8363 999.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 4,3k</p>
+                                </div>
+                                <div class="details__address">Đà Nẵng</div>
+                            </div>
+                        </div>
+                        <div class="box-product hidden">
+                            <div class="box-product__img">
+                                <img src="images/product/sport_clothes4.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Quần áo thể thao nữ TRF</h4>
+                                <a href="#" class="details__flashsale">&#8363 780.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 1.000.000</span>
+                                    <span class="new-price">&#8363 809.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 787</p>
+                                </div>
+                                <div class="details__address">TP. Hồ Chí Minh</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="types-item__more-information">
+                        <a href="see-more-skirt.html" class="buy-btn">Xem thêm</a>
+                    </div>
+                </div>
+
+                <div class="types-skirt types__border types__item">
+                    <h2 class="types__item__name">Skirt</h2>
+                    <div class="types__item__list">
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/skirt5.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Váy ngắn xếp KIO</h4>
+                                <a href="#" class="details__flashsale">&#8363 990.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 1.309.000</span>
+                                    <span class="new-price">&#8363 1.000.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 583</p>
+                                </div>
+                                <div class="details__address">TP. Cần Thơ</div>
+                            </div>
+                        </div>
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/skirt6.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Váy công sở OUI</h4>
+                                <a href="#" class="details__flashsale">&#8363 750.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 999.000</span>
+                                    <span class="new-price">&#8363 899.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 2,5k</p>
+                                </div>
+                                <div class="details__address">Hà nội</div>
+                            </div>
+                        </div>
+                        <div class="box-product hidden">
+                            <div class="box-product__img">
+                                <img src="images/product/skirt7.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Váy học sinh SCH</h4>
+                                <a href="#" class="details__flashsale">&#8363 550.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 779.000</span>
+                                    <span class="new-price">&#8363 660.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 883</p>
+                                </div>
+                                <div class="details__address">TP. Hồ Chí Minh</div>
+                            </div>
+                        </div>
+                        <div class="box-product hidden">
+                            <div class="box-product__img">
+                                <img src="images/product/skirt8.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Váy ngắn phong cách UUP</h4>
+                                <a href="#" class="details__flashsale">&#8363 1.090.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 1.879.000</span>
+                                    <span class="new-price">&#8363 1.321.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 990</p>
+                                </div>
+                                <div class="details__address">Hà nội</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="types-item__more-information">
+                        <a href="see-more-skirt.html" class="buy-btn">Xem thêm</a>
+                    </div>
+                </div>
+
+                <div class="types-coat types__border types__item">
+                    <h2 class="types__item__name">Coat</h2>
+                    <div class="types__item__list">
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/coat5.jpeg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Áo khoác 089</h4>
+                                <a href="#" class="details__flashsale">&#8363 590.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 879.000</span>
+                                    <span class="new-price">&#8363 661.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 777</p>
+                                </div>
+                                <div class="details__address">Đà Nẵng</div>
+                            </div>
+                        </div>
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/coat6.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Áo khoác KRA</h4>
+                                <a href="#" class="details__flashsale">&#8363 1.000.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 1.809.000</span>
+                                    <span class="new-price">&#8363 1.355.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 1,7k</p>
+                                </div>
+                                <div class="details__address">Hà nội</div>
+                            </div>
+                        </div>
+                        <div class="box-product hidden">
+                            <div class="box-product__img hidden">
+                                <img src="images/product/coat7.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Áo khoác DVN</h4>
+                                <a href="#" class="details__flashsale">&#8363 600.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 879.000</span>
+                                    <span class="new-price">&#8363 721.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 1.9k</p>
+                                </div>
+                                <div class="details__address">TP. Hồ Chí Minh</div>
+                            </div>
+                        </div>
+                        <div class="box-product hidden">
+                            <div class="box-product__img">
+                                <img src="images/product/coat8.jpeg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Áo Khoác NTDT</h4>
+                                <a href="#" class="details__flashsale">&#8363 1.070.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 1.479.000</span>
+                                    <span class="new-price">&#8363 1.321.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 3,3k</p>
+                                </div>
+                                <div class="details__address">Tây Nguyên</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="types-item__more-information">
+                        <a href="see-more-skirt.html" class="buy-btn">Xem thêm</a>
+                    </div>
+                </div>
+
+                <div class="types-Tshirt types__border type-__tem">
+                    <h2 class="types__item__name">T-Shirt</h2>
+                    <div class="types__item__list">
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/t-shirt1.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Áo Thun TNT</h4>
+                                <a href="#" class="details__flashsale">&#8363 470.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 679.000</span>
+                                    <span class="new-price">&#8363 521.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 1,3k</p>
+                                </div>
+                                <div class="details__address">Hà Nội</div>
+                            </div>
+                        </div>
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/t-shirt2.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Áo Thun VTO</h4>
+                                <a href="#" class="details__flashsale">&#8363 1.066.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 1.666.000</span>
+                                    <span class="new-price">&#8363 1.333.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 5,3k</p>
+                                </div>
+                                <div class="details__address">TP Hồ Chí Minh</div>
+                            </div>
+                        </div>
+                        <div class="box-product hidden">
+                            <div class="box-product__img">
+                                <img src="images/product/t-shirt3.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Áo Thun NMH</h4>
+                                <a href="#" class="details__flashsale">&#8363 440.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 579.000</span>
+                                    <span class="new-price">&#8363 501.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 783</p>
+                                </div>
+                                <div class="details__address">TP Hồ Chí Minh</div>
+                            </div>
+                        </div>
+                        <div class="box-product hidden">
+                            <div class="box-product__img">
+                                <img src="images/product/t-shirt4.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Áo Thun TTK</h4>
+                                <a href="#" class="details__flashsale">&#8363 470.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 679.000</span>
+                                    <span class="new-price">&#8363 521.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 713</p>
+                                </div>
+                                <div class="details__address">Đà Nẵng</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="types-item__more-information">
+                        <a href="see-more-skirt.html" class="buy-btn">Xem thêm</a>
+                    </div>
+                </div>
+
+                
+            </div>         
+        </div>
+        
+    </div>
+</main>
+
+
+<!--footer-->
+<div class="footer">
+   <div class="container">
+       <div class="row">
+           <div class="footer-col-1">
+               <h3>Download Our App</h3>
+               <p>Dowload App for Android and ios mobile phone.</p>
+               <div class="app-logo">
+                   <img src="images/play-store.png">
+                   <img src="images/app-store.png">
+
+               </div>
+           </div>
+           <div class="footer-col-2">
+            <img src="images/logofooter.png">
+            <p>3T Store luôn là người đồng hành cùng bạn.<br>Địa chỉ: đường 3/2 trường ĐHCT khu II</p>
+        </div>
+    
+            <div class="footer-col-3">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Zalo</li>
+                    <li>Instagram</li>
+                    <li>TikTok</li>
+                </ul>
+                </div>
+       </div>
+       <hr>
+       <p class="copyright">Copyright 2022 - FDT GROUP</p>
+   </div>
+</div>
+<script src="sanpham.js"></script>
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight= "0px";
+    function menutoggle(){
+        if(MenuItems.style.maxHeight== "0px"){
+         MenuItems.style.maxHeight= "200px"
+        }
+        else{
+         MenuItems.style.maxHeight= "0px";
+        }
+    }
+</script>
+</body>
+</html>

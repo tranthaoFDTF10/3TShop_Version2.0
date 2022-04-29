@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="sanpham-detail-1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+    
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo3Tshop.png" width="125px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a class="nav_link" href="index.html">Trang chủ</a></li>
+                        <li><a class="nav_link" href="sanpham.html">Sản phẩm</a></li>
+                        <li><a class="nav_link" href="gioithieu.html">Giới thiệu</a></li>
+                        <li><a class="nav_link" href="lienhe.html">Liên hệ</a></li>
+                        <li><a class="nav_link" href="taikhoan.html">Tài khoản</a></li>
+                    </ul>
+                </nav>
+                <img src="images/cart.png" width="30px" height="30px">
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+    </div>
+<!--Code nội dung vào chỗ trống này-->
+<main class="main">
+    <div class="card-wrapper">
+        <div class="card">
+            <div class="card__imgs">
+                <div class="card__imgs__display img__display">
+                    <div class="img-showcase">
+                        <img src="images/product/shoe2.jpg" id="main-img">
+                    </div>
+                </div>
+                <div class="img__select">
+                    <div class="img__select__item">
+                        <img src="images/product/shoe10.1.jpeg" onmouseover="myFunction(this)">
+                    </div>
+                    <div class="img__select__item">
+                        <img src="images/product/shoe10.2.jpeg" onmouseover="myFunction(this)">
+                    </div>
+                    <div class="img__select__item">
+                        <img src="images/product/shoe10.3.jpeg" onmouseover="myFunction(this)">
+                    </div>
+                    <div class="img__select__item">
+                        <img src="images/product/shoe2.jpg" onmouseover="myFunction(this)">
+                    </div>
+                </div>
+            </div>
+            <!--card right-->
+            <div class="card__content">
+                <h2 class="card__content__name">NIKE T5RUP</h2>
+                <a href="#" class="card__content__link">visit our store</a>
+                <div class="card__content__rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                    <span>4.7(887)</span>
+                </div>
+                <div class="card__content__price">
+                    <p class="last-price">Gái cũ: <span>&#8363 1.700.00</span></p>
+                    <p class="new-price">Giá mới: <span>&#8363 1.500.00 (1.13%)</span></p>
+                </div>
+
+                <div class="card__content__detail">
+                    <h2>Thông tin về sản phẩm: </h2>
+                    <p>Giày Nike T5RUP có thiết kế đẹp, màu sắc năng động trẻ trung phù hợp với nhiều lứa tuổi đặc biệt là học sinh, sinh viên. Trọng lượng vô cùng nhẹ phù hợp đi học, đi chơi hoặc đi làm.</p>
+                    <ul>
+                        <li>Tình trạng: <span>Sẵn hàng</span></li>
+                        <li>Loại: <span>Giày NIKE</span></li>
+                        <li>Phạm vi giao hàng: <span>Toàn trái đất</span></li>
+                        <li>Phí ship: <span>Free</span></li>
+                    </ul>
+                </div>
+
+                <div class="card__content__info">
+                    <label for="size">Size: </label>
+                    <select name="size" id="size">
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">42</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                    </select>
+                    <label for="number">Số lượng: </label>
+                    <input type="number" min="0" value="1">
+                    <button type="button" class="buy-btn">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                    <button type="button" class="buy-btn">Buy now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!--footer-->
+<div class="footer">
+   <div class="container">
+       <div class="row">
+           <div class="footer-col-1">
+               <h3>Download Our App</h3>
+               <p>Dowload App for Android and ios mobile phone.</p>
+               <div class="app-logo">
+                   <img src="images/play-store.png">
+                   <img src="images/app-store.png">
+
+               </div>
+           </div>
+           <div class="footer-col-2">
+            <img src="images/logofooter.png">
+            <p>3T Store luôn là người đồng hành cùng bạn.<br>Địa chỉ: đường 3/2 trường ĐHCT khu II</p>
+        </div>
+    
+            <div class="footer-col-3">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Zalo</li>
+                    <li>Instagram</li>
+                    <li>TikTok</li>
+                </ul>
+                </div>
+       </div>
+       <hr>
+       <p class="copyright">Copyright 2022 - FDT GROUP</p>
+   </div>
+</div>
+<script src="sanpham-detail-1.js"></script>
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight= "0px";
+    function menutoggle(){
+        if(MenuItems.style.maxHeight== "0px"){
+         MenuItems.style.maxHeight= "200px"
+        }
+        else{
+         MenuItems.style.maxHeight= "0px";
+        }
+    }
+</script>
+</body>
+</html>

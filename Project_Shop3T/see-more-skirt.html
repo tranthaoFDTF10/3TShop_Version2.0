@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="see-more-skirt.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+    
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo3Tshop.png" width="125px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a class="nav_link" href="index.html">Trang chủ</a></li>
+                        <li><a class="nav_link" href="sanpham.html">Sản phẩm</a></li>
+                        <li><a class="nav_link" href="gioithieu.html">Giới thiệu</a></li>
+                        <li><a class="nav_link" href="lienhe.html">Liên hệ</a></li>
+                        <li><a class="nav_link" href="taikhoan.html">Tài khoản</a></li>
+                    </ul>
+                </nav>
+                <img src="images/cart.png" width="30px" height="30px">
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+    </div>
+<!--Code nội dung vào chỗ trống này-->
+<main class="main">
+    <div class="all-product">
+        <div class="all-product__content">
+            <h1>Danh sách sản phẩm</h1>
+            <p>Dưới đây là tất cả các sản phẩm về Váy của shop</p>
+        </div>
+        <div class="all-product__big-list big-list">
+            <div class="big-list__sidebar-funnel sidebar-funnel">
+                <div class="sidebar-funnel__nav">
+                    <div class="sidebar-funnel__nav__menu-toggle menu-toggle">
+                    </div>
+                    <div class="menu-toggle__logo">
+                        <div class="menu-toggle__logo__imgBx">
+                            <img src="images/product/3T-no-background.png" alt="">
+                        </div>
+                    </div>
+                    <ul class="menu-toggle__main-menu main-menu">
+                        <li class="li">
+                            <div class="li1">
+                                <span class="icon"><ion-icon name="airplane-outline"></ion-icon></span>
+                                <div class="bxtext">
+                                    <div class="textt">Vận chuyển</div>
+                                    <div class="textt2"><ion-icon name="caret-down-circle-outline"></ion-icon></div>
+                                </div>
+                            </div>
+                            <div class="shipping-unit li2">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox5">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox6">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox7">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox8">
+                                <div class="check">
+                                    <div class="checkbox-1">
+                                        <label for="checkbox5" class="checkbox-btn checkbox-btn5"></label>
+                                        <label for="checkbox6" class="checkbox-btn checkbox-btn6"></label>
+                                        <label for="checkbox7" class="checkbox-btn checkbox-btn7"></label>
+                                        <label for="checkbox8" class="checkbox-btn checkbox-btn8"></label>
+                                    </div>
+                                    <ul class="checkbox-2">
+                                       <li class="checkbox-name">Hỏa tốc</li>
+                                       <li class="checkbox-name">Nhanh</li>
+                                       <li class="checkbox-name">Tiết kiệm</li>
+                                       <li class="checkbox-name">Siêu tiết kiệm</li> 
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li">
+                            <div class="li1">
+                                <span class="icon"><ion-icon name="receipt-outline"></ion-icon></span>
+                                <div class="bxtext">
+                                    <div class="textt">Nơi bán</div>
+                                    <div class="textt2"><ion-icon name="caret-down-circle-outline"></ion-icon></div>
+                                </div>
+                            </div>
+                            <div class="area li2">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox1">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox2">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox3">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox4">
+                                <div class="check">
+                                    <div class="checkbox-1">
+                                        <label for="checkbox1" class="checkbox-btn checkbox-btn1"></label>
+                                        <label for="checkbox2" class="checkbox-btn checkbox-btn2"></label>
+                                        <label for="checkbox3" class="checkbox-btn checkbox-btn3"></label>
+                                        <label for="checkbox4" class="checkbox-btn checkbox-btn4"></label>
+                                    </div>
+                                    <ul class="checkbox-2">
+                                       <li class="checkbox-name">TP. Hồ Chí Minh</li>
+                                       <li class="checkbox-name">Hà Nội</li>
+                                       <li class="checkbox-name">Cần Thơ</li>
+                                       <li class="checkbox-name">Thái Nguyên</li> 
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li">
+                            <div class="li1">
+                                <span class="icon"><ion-icon name="wallet-outline"></ion-icon></ion-icon></span>
+                                <div class="bxtext">
+                                    <div class="textt">Khoảng giá</div>
+                                    <div class="textt2"><ion-icon name="caret-down-circle-outline"></ion-icon></div>
+                                </div>
+                            </div>
+                            <div class="pirce-range li2">
+                                <ul class="text-price">
+                                  <li><input type="text" placeholder="Từ..."></li>
+                                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                  <li><input type="text" placeholder="Đến..."></li>
+                                </ul>
+                                <div class="buy-btn btn-price">Áp dụng</div>
+                            </div>
+                        </li>
+                        <li class="li">
+                            <div class="li1">
+                                <span class="icon"><ion-icon name="card-outline"></ion-icon></span>
+                                <div class="bxtext">
+                                    <div class="textt">Thanh toán</div>
+                                    <div class="textt2"><ion-icon name="caret-down-circle-outline"></ion-icon></div>
+                                </div>
+                            </div>
+                            <div class="pay li2">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox13">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox14">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox15">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox16">
+                                <div class="check">
+                                    <div class="checkbox-1">
+                                        <label for="checkbox13" class="checkbox-btn checkbox-btn13"></label>
+                                        <label for="checkbox14" class="checkbox-btn checkbox-btn14"></label>
+                                        <label for="checkbox15" class="checkbox-btn checkbox-btn15"></label>
+                                        <label for="checkbox16" class="checkbox-btn checkbox-btn16"></label>
+                                    </div>
+                                    <ul class="checkbox-2">
+                                       <li class="checkbox-name">Khi nhận hàng</li>
+                                       <li class="checkbox-name">Qua ví điện tử</li>
+                                       <li class="checkbox-name">Qua ví shoppe</li>
+                                       <li class="checkbox-name">Trả góp 0%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li">
+                            <div class="li1">
+                                <span class="icon"><ion-icon name="storefront-outline"></ion-icon></ion-icon></span>
+                                <div class="bxtext">
+                                    <div class="textt">Loại shop</div>
+                                    <div class="textt2"><ion-icon name="caret-down-circle-outline"></ion-icon></div>
+                                </div>
+                            </div>
+                            <div class="favorite-shop li2">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox9">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox10">
+                                <div class="check">
+                                    <div class="checkbox-1">
+                                        <label for="checkbox9" class="checkbox-btn checkbox-btn9"></label>
+                                        <label for="checkbox10" class="checkbox-btn checkbox-btn10"></label>
+                                    </div>
+                                    <ul class="checkbox-2">
+                                       <li class="checkbox-name">Shop yêu thích</li>
+                                       <li class="checkbox-name">Shopee mall</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="li">
+                            <div class="li1">
+                                <span class="icon"><ion-icon name="cube-outline"></ion-icon></ion-icon></span>
+                                <div class="bxtext">
+                                    <div class="textt">Tình trạng</div>
+                                    <div class="textt2"><ion-icon name="caret-down-circle-outline"></ion-icon></div>
+                                </div>
+                            </div>
+                            <div class="state li2">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox11">
+                                <input type="checkbox" name="checkbox-btn" class="checked" id="checkbox12">
+                                <div class="check">
+                                    <div class="checkbox-1">
+                                        <label for="checkbox11" class="checkbox-btn checkbox-btn11"></label>
+                                        <label for="checkbox12" class="checkbox-btn checkbox-btn12"></label>
+                                    </div>
+                                    <ul class="checkbox-2">
+                                       <li class="checkbox-name">Đã qua sử dụng</li>
+                                       <li class="checkbox-name">Mới</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>  
+            <div class="big-list__types types">
+                <div class="types-skirt types__border types__item">
+                    <h2 class="types__item__name">Skirt</h2>
+                    <div class="types__item__list">
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/skirt5.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Váy ngắn xếp KIO</h4>
+                                <a href="#" class="details__flashsale">&#8363 990.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 1.309.000</span>
+                                    <span class="new-price">&#8363 1.000.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 583</p>
+                                </div>
+                                <div class="details__address">TP. Cần Thơ</div>
+                            </div>
+                        </div>
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/skirt6.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Váy công sở OUI</h4>
+                                <a href="#" class="details__flashsale">&#8363 750.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 999.000</span>
+                                    <span class="new-price">&#8363 899.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 2,5k</p>
+                                </div>
+                                <div class="details__address">Hà nội</div>
+                            </div>
+                        </div>
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/skirt7.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Váy học sinh SCH</h4>
+                                <a href="#" class="details__flashsale">&#8363 550.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 779.000</span>
+                                    <span class="new-price">&#8363 660.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 883</p>
+                                </div>
+                                <div class="details__address">TP. Hồ Chí Minh</div>
+                            </div>
+                        </div>
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/skirt8.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Váy ngắn phong cách UUP</h4>
+                                <a href="#" class="details__flashsale">&#8363 1.090.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 1.879.000</span>
+                                    <span class="new-price">&#8363 1.321.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 990</p>
+                                </div>
+                                <div class="details__address">Hà nội</div>
+                            </div>
+                        </div>
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/skirt9.jpeg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Váy ngắn phong cách KKP</h4>
+                                <a href="#" class="details__flashsale">&#8363 1.191.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 1.889.000</span>
+                                    <span class="new-price">&#8363 1.621.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 5,1k</p>
+                                </div>
+                                <div class="details__address">Hà nội</div>
+                            </div>
+                        </div>
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/skirt10.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Váy ngắn phong cách PYT</h4>
+                                <a href="#" class="details__flashsale">&#8363 2.090.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 3.879.000</span>
+                                    <span class="new-price">&#8363 2.321.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 750</p>
+                                </div>
+                                <div class="details__address">Nước Ngoài</div>
+                            </div>
+                        </div>
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/skirt11.jpeg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Váy ngắn phong cách MIN</h4>
+                                <a href="#" class="details__flashsale">&#8363 1.590.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 1.979.000</span>
+                                    <span class="new-price">&#8363 1.721.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 2.3k</p>
+                                </div>
+                                <div class="details__address">TP Hồ Chí Minh</div>
+                            </div>
+                        </div>
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/skirt12.jpeg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Váy ngắn phong cách MLP</h4>
+                                <a href="#" class="details__flashsale">&#8363 1.090.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 1.379.000</span>
+                                    <span class="new-price">&#8363 1.222.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 1k</p>
+                                </div>
+                                <div class="details__address">Hà nội</div>
+                            </div>
+                        </div>
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/skirt13.jpeg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Váy ngắn phong cách OKK</h4>
+                                <a href="#" class="details__flashsale">&#8363 990.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 1.279.000</span>
+                                    <span class="new-price">&#8363 1.100.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 690</p>
+                                </div>
+                                <div class="details__address">Hà nội</div>
+                            </div>
+                        </div>
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/skirt14.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Váy ngắn phong cách EUP</h4>
+                                <a href="#" class="details__flashsale">&#8363 890.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 1.179.000</span>
+                                    <span class="new-price">&#8363 999.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 1.4k</p>
+                                </div>
+                                <div class="details__address">Đà Nẵng</div>
+                            </div>
+                        </div>
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/skirt15.jpeg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Váy ngắn phong cách QD</h4>
+                                <a href="#" class="details__flashsale">&#8363 777.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 1.111.000</span>
+                                    <span class="new-price">&#8363 888.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 666</p>
+                                </div>
+                                <div class="details__address">Đà Nẵng</div>
+                            </div>
+                        </div>
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/skirt16.jpeg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Váy ngắn phong cách YGF</h4>
+                                <a href="#" class="details__flashsale">&#8363 690.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 879.000</span>
+                                    <span class="new-price">&#8363 765.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 977</p>
+                                </div>
+                                <div class="details__address">TP Hồ Chí Minh</div>
+                            </div>
+                        </div>
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/skirt17.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Váy ngắn phong cách VPJ</h4>
+                                <a href="#" class="details__flashsale">&#8363 590.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 788.000</span>
+                                    <span class="new-price">&#8363 700.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 3.2k</p>
+                                </div>
+                                <div class="details__address">Hà nội</div>
+                            </div>
+                        </div>
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/skirt18.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Váy ngắn văn phòng PVJ</h4>
+                                <a href="#" class="details__flashsale">&#8363 667.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 779.000</span>
+                                    <span class="new-price">&#8363 701.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 2.9k</p>
+                                </div>
+                                <div class="details__address">Hà nội</div>
+                            </div>
+                        </div>
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/skirt19.jpg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Váy ngắn phong cách TRD</h4>
+                                <a href="#" class="details__flashsale">&#8363 720.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 908.000</span>
+                                    <span class="new-price">&#8363 820.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 890</p>
+                                </div>
+                                <div class="details__address">TP Hồ Chí Minh</div>
+                            </div>
+                        </div>
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img src="images/product/skirt20.jpeg">
+                                <div class="link-buy">
+                                    <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
+                                    <a href="#" class="buy-btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="box-product__details details">
+                                <h4 class="details__name">Váy ngắn phong cách ONS</h4>
+                                <a href="#" class="details__flashsale">&#8363 1.090.000 lúc 00:00</a>
+                                <div class="details__price">
+                                    <span class="last-price">&#8363 1.777.000</span>
+                                    <span class="new-price">&#8363 1.333.000</span>
+                                    <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="details__feedback">
+                                    <div class="heart-not"><i class="fa fa-heart-o"></i></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <p>Đã bán 3.6k</p>
+                                </div>
+                                <div class="details__address">TP Hồ Chí Minh</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="types-item__more-information">
+                        <a href="sanpham.html" class="buy-btn">Quay lại</a>
+                    </div>
+                </div>
+
+                
+            </div>         
+        </div>
+        
+    </div>
+</main>
+<!--footer-->
+<div class="footer">
+   <div class="container">
+       <div class="row">
+           <div class="footer-col-1">
+               <h3>Download Our App</h3>
+               <p>Dowload App for Android and ios mobile phone.</p>
+               <div class="app-logo">
+                   <img src="images/play-store.png">
+                   <img src="images/app-store.png">
+
+               </div>
+           </div>
+           <div class="footer-col-2">
+            <img src="images/logofooter.png">
+            <p>3T Store luôn là người đồng hành cùng bạn.<br>Địa chỉ: đường 3/2 trường ĐHCT khu II</p>
+        </div>
+    
+            <div class="footer-col-3">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Zalo</li>
+                    <li>Instagram</li>
+                    <li>TikTok</li>
+                </ul>
+                </div>
+       </div>
+       <hr>
+       <p class="copyright">Copyright 2022 - FDT GROUP</p>
+   </div>
+</div>
+<script src="see-more-skirt.js"></script>
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight= "0px";
+    function menutoggle(){
+        if(MenuItems.style.maxHeight== "0px"){
+         MenuItems.style.maxHeight= "200px"
+        }
+        else{
+         MenuItems.style.maxHeight= "0px";
+        }
+    }
+</script>
+</body>
+</html>
