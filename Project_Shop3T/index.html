@@ -9,43 +9,53 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="images/product/3T-no-background.png" type="image/x-icon">
 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
     
 <body>
-    <div class="header">
-    <div class="container">
-        <div class="navbar">
-            <div class="logo">
-                <img src="images/logo3Tshop.png" width="125px">
+    <header class="header" id="backhome">
+        <div class="container">
+            <div id="navbarr" class="navbar">
+                <div class="logo">
+                    <img src="images/product/logo3Tshop-nobackground.png" width="125px">
+                </div>
+                <nav class="navbar__menu" id="list-menu">
+                    <ion-icon name="close-outline" class="header-toggle" id="close"></ion-icon>
+                    <ul id="menu">
+                        <li><a class="nav_link" href="index.html">Trang chủ</a></li>
+                        <li><a class="nav_link" href="sanpham.html">Sản phẩm</a></li>
+                        <li><a class="nav_link" href="gioithieu.html">Giới thiệu</a></li>
+                        <li><a class="nav_link" href="lienhe.html">Liên hệ</a></li>
+                        <li><a class="nav_link" href="taikhoan.html">Tài khoản</a></li>
+                    </ul>
+                </nav>
+                <ion-icon name="menu-outline" class="header-toggle" id="open"></ion-icon>
+                <!-- co sua chut -->
+                <a class="cart-add cart-add1" href="giohang.html" target="_blank">
+                    <img src="images/cart.png" width="30px" height="30px">
+                    <span class="count">0</span>
+                </a>
+                <!-- co sua chut -->
+            </div>
     
+            <div class="row">
+                <div class="col-2">
+                    <h2>3T Shop <br>Thời trang thể thao chính hãng</h2>
+                    <p>Hãy cho chúng tôi biết bạn cần gì. Chào mừng bạn đến với chúng tôi</p>
+                    <a href="" class="btn">Explore Now</a>
+                </div>
+                <div class="col-2">
+                    <img src="images/image1.png">
+                </div>
             </div>
-            <nav>
-                <ul id="MenuItems">
-                    <li><a class="nav_link" href="index.html">Trang chủ</a></li>
-                    <li><a class="nav_link" href="sanpham.html">Sản phẩm</a></li>
-                    <li><a class="nav_link" href="gioithieu.html">Giới thiệu</a></li>
-                    <li><a class="nav_link" href="lienhe.html">Liên hệ</a></li>
-                    <li><a class="nav_link" href="taikhoan.html">Tài khoản</a></li>
-                </ul>
-            </nav>
-            <img src="images/cart.png" width="30px" height="30px">
-            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </header>
 
-        </div>
-        <div class="row">
-            <div class="col-2">
-                <h2>3T Shop <br>Thời trang thể thao chính hãng</h2>
-                <p>Hãy cho chúng tôi biết bạn cần gì. Chào mừng bạn đến với chúng tôi</p>
-                <a href="" class="btn">Explore Now</a>
-            </div>
-            <div class="col-2">
-                <img src="images/image1.png">
-            </div>
-        </div>
-    </div>
-</div>
-<!--featured categories-->
+    <main class="main">
+        <!--featured categories-->
     <div class="categories">
         <div class="small-container">
             <div class="row">
@@ -200,7 +210,7 @@
                 </div>
                 <p>350.000đ</p>
             </div>
-    
+    <!--https://fontawesome.com/v4/icons/-->
             <div class="col-4">
                 <img src="images/product-11.jpg">
                 <h4>Giày nam 3TS - xám</h4>
@@ -248,48 +258,44 @@
         </div>
     </div>
 
-   <div class="footer">
-       <div class="container">
-           <div class="row">
-               <div class="footer-col-1">
-                   <h3>Download Our App</h3>
-                   <p>Dowload App for Android and ios mobile phone.</p>
-                   <div class="app-logo">
-                       <img src="images/play-store.png">
-                       <img src="images/app-store.png">
+<!-- loading -->
+<div id="preloader"></div>
+<iframe hidden width="560" height="315" src="https://www.youtube.com/embed/BZK3R_qhw_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!--end loading -->
+    </main>
 
-                   </div>
-               </div>
-               <div class="footer-col-2">
-                <img src="images/logofooter.png">
-                <p>3T Store luôn là người đồng hành cùng bạn.<br>Địa chỉ: đường 3/2 trường ĐHCT khu II</p>
-            </div>
-        
-                <div class="footer-col-3">
-                    <h3>Follow us</h3>
-                    <ul>
-                        <li><a href="https://www.facebook.com/"> Facebook</a></li>
-                        <li><a href="https://zaloweb.me/">Zalo</a></li>
-                        <li><a href="https://www.instagram.com/">Instagram</a></li>
-                        <li><a href="https://twitter.com/">Twitter</a></li>
-                    </ul>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Dowload App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+     
                     </div>
-           </div>
-           <hr>
-           <p class="copyright">Copyright 2022 - FDT GROUP</p>
-       </div>
-   </div>
-   <script>
-       var MenuItems = document.getElementById("MenuItems");
-       MenuItems.style.maxHeight= "0px";
-       function menutoggle(){
-           if(MenuItems.style.maxHeight== "0px"){
-            MenuItems.style.maxHeight= "200px"
-           }
-           else{
-            MenuItems.style.maxHeight= "0px";
-           }
-       }
-   </script>
+                </div>
+                <div class="footer-col-2">
+                 <img src="images/logofooter.png">
+                 <p>3T Store luôn là người đồng hành cùng bạn.<br>Địa chỉ: đường 3/2 trường ĐHCT khu II</p>
+             </div>
+         
+                 <div class="footer-col-3">
+                     <h3>Follow us</h3>
+                     <ul class="socials">
+                         <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                         <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                         <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                         <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                     </ul>
+                     </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2022 - FDT GROUP</p>
+            <a class="back" href="#backhome"><ion-icon name="arrow-up-outline"></ion-icon></a>
+        </div>
+     </div>
+   <script src="test.js"></script>
 </body>
 </html>

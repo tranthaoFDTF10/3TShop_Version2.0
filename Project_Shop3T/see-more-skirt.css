@@ -3,58 +3,74 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     font-family: 'Poppins', sans-serif;
- }
+}
+
 .navbar{
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 20px;
 }
+
 nav{
     flex: 1;
-    text-align: right;
 }
+
 nav ul{
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     list-style-type: none;
 }
+
 nav ul li{
-    display:inline-block;
-    margin-right: 20px;
+    margin-right: 10px;
 }
+
 a{
+    padding: 5px 10px;
+    border-radius: 10px;
     text-decoration: none;
     color: #555;
 }
+
 p{
     color: #555;
 }
+
 .container{
     max-width: 1300px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
 }
+
 .row{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .col-2{
     flex-basis: 50%;
     min-width: 300px;
 }
+
 .col-2 img{
     max-width: 100%;
     padding: 50px 0;
 }
+
 .col-2 h1{
     font-size: 50px;
     line-height: 60px;
     margin: 25px 0;
 }
+
 .btn{
     display:inline-block;
     background: #ff523b;
@@ -62,29 +78,141 @@ p{
     padding: 8px 30px;
     margin: 30px 0;
     border-radius: 30px;
-    transition: background 0.5s;
-
+    transition: background 0.5s; 
 }
+
 .btn:hover{
     background: #563434;
 }
+
 .header{
-    background: pink;
+    background: linear-gradient(to right, #40DFEF, #B4FF9F);
 }
+
 .header .row{ /*chua khoang trong cho hinh gio hang*/
     margin-top: 70px;
 }
+
 .nav_link:hover{
     color: #fff;
-    background-color: pink;
+    background-color: #111;
+}
+
+.header-toggle{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.5s;
+}
+
+/* Sau khi man hinh truot lon hon phan tu menu them class sticky vao navbar */
+.sticky{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 8%;
+    background: #f2f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+@media (max-width: 850px){
+    .sticky{
+        max-height: 70px;
+    }
+    .navbar{
+        justify-content: flex-end;
+    }
+
+    .logo{
+        margin-right: auto;
+    }
+
+    .navbar__menu{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: #f2f2f2f2;
+        width: 50%;
+        height: 100vh;
+        padding: 24px 0;
+        z-index: 100;
+        transition: 0.5s;
+        border-radius: 0 0 0 50%;
+        overflow: hidden;
+    }
+    
+    .header-toggle{
+        display: inline;
+    }
+    
+
+    #close{
+        position: absolute;
+        left: 30px;
+        font-size: 40px;
+    }
+   
+    .navbar__menu ul{
+        flex-direction: column;
+    }
+
+    .navbar__menu ul li{
+        margin-top: 30px;
+    }
+
+    .navbar__menu ul li a{
+        font-size: 18px;
+    }
+
+    .show{
+        right: 0;
+    }
 }
 /*---Chèn CSS của nội dung vào đây-----------------------*/
 /* css chung */
+/* ==buy button== */
+.buy-btn{
+    width: 160px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #ffffff;
+    color: #252525;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
 
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.buy-btn:hover{
+    color: #ffffff;
+    background-color: #A85CF9;
+    transition: all ease 0.3s;
+}
+
+/* == end buy button== */
 /* end css chung */
 /* all product */
 
 .all-product{
+    position: relative;
     text-align: center;
     margin-top: 100px;
 }
@@ -152,8 +280,8 @@ p{
 
 .box-product{
     position: relative;
-    margin-top: 10px;
-    flex-basis: 22%;
+    margin-top: 30px;
+    width: 290px;
     border: 2px solid;
     border-radius: 5px;
     /* box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2); */
@@ -165,7 +293,7 @@ p{
 }
 
 .box-product__img{
-    max-height: 350px;
+    height: 350px;
     position: relative;
 }
 
@@ -195,41 +323,7 @@ p{
     visibility: visible;
     animation: fade 0.5s;
 }
-/* ==buy button== */
-.buy-btn{
-    width: 160px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    background-color: #ffffff;
-    color: #252525;
-    font-weight: 700;
-    letter-spacing: 1px;
-    border-radius: 20px;
-    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
-}
 
-@keyframes fade{
-    0%{
-        opacity: 0;
-    }
-
-    100%{
-        opacity: 1;
-    }
-}
-
-.buy-btn:hover{
-    color: #ffffff;
-    background-color: #A85CF9;
-    transition: all ease 0.3s;
-}
-
-/* == end buy button== */
-
-/* ==box product== */
 
 .box-product__details{
     padding: 10px;
@@ -237,10 +331,11 @@ p{
 
 .details__name{
     margin: 5px 0; 
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color:#40d3dc;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .details__flashsale{
@@ -261,12 +356,16 @@ p{
     margin: 0.4rem 0;
 }
 
-.last-price{
-    text-decoration: line-through;
+.details__price span:nth-of-type(2){
+    color: #FD5D5D;
 }
 
-.new-price{
-    color: #FD5D5D;
+.details__price span:nth-of-type(3){
+    color: #00C897;
+}
+
+.last-price{
+    text-decoration: line-through;
 }
 
 .details__feedback{
@@ -414,11 +513,11 @@ p{
     transition: 0.5s;
 }
 
-.sidebar-funnel__nav .menu-toggle__main-menu li.active{
+.sidebar-funnel__nav .menu-toggle__main-menu li.momenu{
     height: 260px;
 }
 
-.sidebar-funnel__nav .menu-toggle__main-menu li.active .textt2{
+.sidebar-funnel__nav .menu-toggle__main-menu li.momenu .textt2{
     transform: rotate(-180deg);
 }
 
@@ -443,6 +542,10 @@ p{
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
+}
+
+.icon:hover{
+    color: #fff;
 }
 
 .sidebar-funnel__nav .menu-toggle__main-menu li .li1 .bxtext{
@@ -620,33 +723,7 @@ p{
 
 /* ==responsive all-product== */
 /* ==tablet== */
-@media (max-width: 1024px){
-    .all-product__big-list{
-        overflow: hidden;
-    }
-
-    .big-list__sidebar-funnel{
-        width: 0;
-        flex-basis: 60px;
-        z-index: 1;
-    }
-
-    .types__border{
-        margin-left: 70px;
-    }
-
-    .box-product{
-        flex-basis: 40%;
-    }
-
-    /* .types__item__list{
-        flex-direction:column;
-    } */
-}
-/* ==end tablet== */
-
-/* ==smartphone== */
-@media (max-width: 420px){
+@media (max-width: 740px){
     .all-product__big-list{
         overflow: hidden;
     }
@@ -666,19 +743,54 @@ p{
     }
 
     .types__item__list{
+        flex-wrap: wrap;
+    }
+
+    .box-product{
+        width: 250px;
+    }
+}
+/* ==end tablet== */
+
+/* ==smartphone== */
+@media (max-width: 380px){
+    .all-product__big-list{
+        overflow: hidden;
+    }
+
+    .big-list__sidebar-funnel{
+        position: absolute;
+        width: 0;
+        z-index: 1;
+    }
+
+    .types__border{
+        margin-left: 70px;
+    }
+
+    .types__item__list{
         flex-direction:column;
     }
 
-    .hidden{
-        display: none;
+    .box-product{
+        width: 270px;
     }
 }
 /* ==end smartphone== */
 /* ==end responsive all-product== */
-/* ==end all product== */
 
 
-
+/* -----------------  LOADING --------------- */
+#preloader{
+    background: #fff url(images/product/loading.gif) no-repeat center center;
+    background-size: 70%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 300;
+}
+/* ----------------- END LOADING --------------- */
 
 /*---footer-----------------------*/
 
@@ -733,45 +845,20 @@ ul{
     text-align: center;
 }
 
-
-.menu-icon{
-    width: 28px;
-    margin-left: 20px;
-    display: none;
-}
-#MenuItems:hover{
+.back{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    font-size: 20px;
+    background: #000;
     color: #fff;
-    background-color: #FFB6C1;
 }
-@media only screen and (max-width: 800px){
-    nav ul{
-        position: absolute;
-        top: 80px;
-        right: 0;
-        background: #FFB6C1;
-        width: 40%;
-        overflow: hidden;
-        transition: max-height 0.5s;
-    }
-    nav ul li{
-        display: block;
-        margin-right: 30px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    nav ul li a{
-        color: #000;
-    }
-    .menu-icon{
-        display: block;
-        cursor: pointer;
-    }
+
+.socials li a{
+    font-size: 20px;
+    color: #fff;
 }
-@media only screen and (max-width: 600px){
-    .row{
-        text-align: center;
-    }
-    .col-2, .col-3, .col-4{
-        flex-basis: 100%;
-    }
+
+.socials li a:hover{
+    color: #40DFEF;
 }

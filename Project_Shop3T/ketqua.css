@@ -1,77 +1,71 @@
-*{
-    margin: 0;
+* {
+    margin: 0; /*Lề trong css*/
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
 }
 
-.navbar{
-    display: flex;
+.navbar {
+    display: flex; /*Giúp cho các khối được sắp xếp căn chỉnh khi chúng ta responsive*/
     align-items: center;
     justify-content: center;
     padding: 20px;
 }
 
-nav{
-    
+nav {
     flex: 1;
+    text-align: right;
 }
 
-nav ul{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    list-style-type: none;
+nav ul {
+    display: inline-block;
+    list-style-type: none; /*Xác định kiểu chỉ mục nhưng ở đây là none*/
 }
 
-nav ul li{
-    margin-right: 10px;
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
 }
-
-a{
+/**/
+a {
     padding: 5px 10px;
     border-radius: 10px;
-    text-decoration: none;
+    text-decoration: none; /*Định dạng văn bản bình thường*/
+
     color: #555;
 }
 
-p{
+p {
     color: #555;
 }
-
 .container{
     max-width: 1300px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
 }
-
 .row{
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-wrap: wrap;  /*Cho phép các items tự động xuống hàng hoặc vẫn luôn nằm trên cùng một hàng khi kích thước container thay đổi*/
+    justify-content: space-around; /*Khi mà các phần tử ở trong container không chứa hết trong chiều rộng của container, thuộc tính này sẽ xác định cách sắp xếp các phần tử ở trong container đó*/
 }
-
 .col-2{
-    flex-basis: 50%;
+    flex-basis: 50%; /*Phần tử con chỉ bằng 50% phần tử cha*/
     min-width: 300px;
 }
-
 .col-2 img{
     max-width: 100%;
     padding: 50px 0;
 }
-
 .col-2 h1{
     font-size: 50px;
     line-height: 60px;
     margin: 25px 0;
 }
-
 .btn{
     display:inline-block;
     background: #ff523b;
@@ -79,102 +73,22 @@ p{
     padding: 8px 30px;
     margin: 30px 0;
     border-radius: 30px;
-    transition: background 0.5s; 
-}
+    transition: background 0.5s;
 
+}
 .btn:hover{
     background: #563434;
 }
-
 .header{
     background: linear-gradient(to right, #40DFEF, #B4FF9F);
 }
-
 .header .row{ /*chua khoang trong cho hinh gio hang*/
     margin-top: 70px;
 }
-
 .nav_link:hover{
     color: #fff;
     background-color: #111;
 }
-
-.header-toggle{
-    font-size: 30px;
-    cursor: pointer;
-    display: none;
-    transition: 0.5s;
-}
-
-/* Sau khi man hinh truot lon hon phan tu menu them class sticky vao navbar */
-.sticky{
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 10px 8%;
-    background: #f2f2f2f2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 5;
-    transition: padding 0.7s ease;
-}
-
-@media (max-width: 850px){
-    .sticky{
-        max-height: 70px;
-    }
-    .navbar{
-        justify-content: flex-end;
-    }
-
-    .logo{
-        margin-right: auto;
-    }
-
-    .navbar__menu{
-        position: fixed;
-        top: 0;
-        right: -100%;
-        background-color: #f2f2f2f2;
-        width: 50%;
-        height: 100vh;
-        padding: 24px 0;
-        z-index: 100;
-        transition: 0.5s;
-        border-radius: 0 0 0 50%;
-        overflow: hidden;
-    }
-    
-    .header-toggle{
-        display: inline;
-    }
-    
-
-    #close{
-        position: absolute;
-        left: 30px;
-        font-size: 40px;
-    }
-   
-    .navbar__menu ul{
-        flex-direction: column;
-    }
-
-    .navbar__menu ul li{
-        margin-top: 30px;
-    }
-
-    .navbar__menu ul li a{
-        font-size: 18px;
-    }
-
-    .show{
-        right: 0;
-    }
-}
-/*---Chèn CSS của nội dung vào đây-----------------------*/
 
 .categories{
     margin: 70px 0;
@@ -247,20 +161,6 @@ h4{
 small{
     color: #555;
 }
-
-
-/* -----------------  LOADING --------------- */
-#preloader{
-    background: #fff url(images/product/loading.gif) no-repeat center center;
-    background-size: 70%;
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 300;
-}
-/* ----------------- END LOADING --------------- */
-
 /*footer*/
 .footer{
     background: #000;
@@ -322,8 +222,40 @@ ul{
 .footer-col-3 a:hover {
     color: silver;
 }
-
-
+/*menu icon*/
+.menu-icon{
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+#MenuItems:hover{
+    color: #fff;
+    background-color:linear-gradient(to right, #40DFEF, #B4FF9F);
+}
+@media only screen and (max-width: 800px){
+    nav ul{
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: linear-gradient(to right, #40DFEF, #B4FF9F);
+        width: 40%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: #000;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+}
 @media only screen and (max-width: 600px){
     .row{
         text-align: center;
@@ -337,25 +269,25 @@ ul{
 /*tai khoan*/
 .account-page{
     padding: 50px 0;
-    background: linear-gradient(to right, #40DFEF, #B4FF9F);
+    background: linear-gradient(to right, #40DFEF, #B4FF9F);;
 }
 .form-container{
     background: #fff;
     width: 300px;
-    height: 400px;
-    position: relative;
+    height: 350px;
+    position: relative;  /*Định vị trí tuyệt đối cho các thành phần, không gây ảnh hưởng tới vị trí ban đầu hay các thành phần khác.*/
     text-align: center;
     padding: 20px 0;
     margin: auto;
-    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
-    overflow: hidden; /*viet sau*/
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1); /*sử dụng để tạo bóng cho các phần tử có dạng box, có tác dụng với các đường viền, giúp phần tử hiển thị nổi bật tương tự kiểu hộp 3D.*/
+    overflow: hidden; /*viet sau: Khi chiều cao của box không đủ chứa text, thì text bị tràn sẽ được dấu đi.*/
 }
 .form-container span{
     font-weight: bold;
     padding: 0 5px;
     color: #555;
     cursor: pointer;
-    width: 100px;
+    width: 300px;
     display: inline-block;
 }
 .form-btn{
@@ -370,11 +302,13 @@ ul{
     transition: transform 1s;
 
 }
-form input{
+form p{
     width: 100%;
-    height: 30px;
-    margin: 20px 0;
-    padding: 0 20px;
+    height: 40px;
+    font-size: 13px;
+    margin: 5px 0;
+    padding: 7px 15px;
+    text-align: left;
     border: 1px solid #ccc;
 }
 form .btn{
@@ -396,30 +330,15 @@ form a{
     font-size: 12px;
 }
 #Indicator{
-    width: 100px;
+    width: 150px;
     border: none;
     background: #ff523b;
     height: 3px;
     margin-top: 8px;
-    transform: translateX(100px);
+    transform: translate(80px,0px);
     transition: transform 1s; /*viet sau*/
 
 }
-
-.back{
-    position: fixed;
-    right: 50px;
-    bottom: 50px;
-    font-size: 20px;
-    background: #000;
+button a{
     color: #fff;
-}
-
-.socials li a{
-    font-size: 20px;
-    color: #fff;
-}
-
-.socials li a:hover{
-    color: #40DFEF;
 }

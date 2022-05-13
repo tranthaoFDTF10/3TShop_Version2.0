@@ -3,24 +3,27 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trang chủ</title>
+    <title>Chi tiết</title>
     <link rel="stylesheet" href="sanpham-detail-1.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="images/product/3T-no-background.png" type="image/x-icon">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
     
 <body>
-    <div class="header">
+    <header class="header">
         <div class="container">
-            <div class="navbar">
+            <div id="navbarr" class="navbar">
                 <div class="logo">
-                    <img src="images/logo3Tshop.png" width="125px">
+                    <img src="images/product/logo3Tshop-nobackground.png" width="125px">
                 </div>
-                <nav>
-                    <ul>
+                <nav class="navbar__menu" id="list-menu">
+                    <ion-icon name="close-outline" class="header-toggle" id="close"></ion-icon>
+                    <ul id="menu">
                         <li><a class="nav_link" href="index.html">Trang chủ</a></li>
                         <li><a class="nav_link" href="sanpham.html">Sản phẩm</a></li>
                         <li><a class="nav_link" href="gioithieu.html">Giới thiệu</a></li>
@@ -28,14 +31,19 @@
                         <li><a class="nav_link" href="taikhoan.html">Tài khoản</a></li>
                     </ul>
                 </nav>
-                <img src="images/cart.png" width="30px" height="30px">
-                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+                <ion-icon name="menu-outline" class="header-toggle" id="open"></ion-icon>
+                <!-- co sua chut -->
+                <a class="cart-add cart-add1" href="giohang.html" target="_blank">
+                    <img src="images/cart.png" width="30px" height="30px">
+                    <span class="count">0</span>
+                </a>
+                <!-- co sua chut -->
             </div>
         </div>
-    </div>
+    </header>
 <!--Code nội dung vào chỗ trống này-->
 <main class="main">
-    <div class="card-wrapper">
+    <div class="card-wrapper box-product">
         <div class="card">
             <div class="card__imgs">
                 <div class="card__imgs__display img__display">
@@ -45,7 +53,7 @@
                 </div>
                 <div class="img__select">
                     <div class="img__select__item">
-                        <img src="images/product/shoe10.1.jpeg" onmouseover="myFunction(this)">
+                        <img class="linkimg" src="images/product/shoe10.1.jpeg" onmouseover="myFunction(this)">
                     </div>
                     <div class="img__select__item">
                         <img src="images/product/shoe10.2.jpeg" onmouseover="myFunction(this)">
@@ -60,7 +68,7 @@
             </div>
             <!--card right-->
             <div class="card__content">
-                <h2 class="card__content__name">NIKE T5RUP</h2>
+                <h2 class="card__content__name details__name">NIKE T5RUP</h2>
                 <a href="#" class="card__content__link">visit our store</a>
                 <div class="card__content__rating">
                     <i class="fa fa-star"></i>
@@ -72,7 +80,7 @@
                 </div>
                 <div class="card__content__price">
                     <p class="last-price">Gái cũ: <span>&#8363 1.700.00</span></p>
-                    <p class="new-price">Giá mới: <span>&#8363 1.500.00 (1.13%)</span></p>
+                    <p>Giá mới:<span class="new-price">1.500.00</span>&#8363 (1.13%)</p>
                 </div>
 
                 <div class="card__content__detail">
@@ -84,6 +92,7 @@
                         <li>Phạm vi giao hàng: <span>Toàn trái đất</span></li>
                         <li>Phí ship: <span>Free</span></li>
                     </ul>
+                    <div class="idsp">37</div>
                 </div>
 
                 <div class="card__content__info">
@@ -99,58 +108,55 @@
                         <option value="45">45</option>
                     </select>
                     <label for="number">Số lượng: </label>
-                    <input type="number" min="0" value="1">
-                    <button type="button" class="buy-btn">Add to cart<i class="fa fa-shopping-cart"></i></button>
-                    <button type="button" class="buy-btn">Buy now</button>
+                    <input id="incart" type="number" min="0" value="1">
+                    <button type="button" class="buy-btn add-cart">Add to cart<i class="fa fa-shopping-cart"></i></button>
+                    <a href="sanpham.html" type="button" class="buy-btn">Quay lại</a>
                 </div>
             </div>
         </div>
     </div>
+
+     <!-- loading -->
+     <div id="preloader"></div>
+     <iframe hidden width="560" height="315" src="https://www.youtube.com/embed/BZK3R_qhw_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <iframe hidden width="560" height="315" src="https://www.youtube.com/embed/BZK3R_qhw_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <iframe hidden width="560" height="315" src="https://www.youtube.com/embed/BZK3R_qhw_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <!--end loading -->
 </main>
 <!--footer-->
 <div class="footer">
-   <div class="container">
-       <div class="row">
-           <div class="footer-col-1">
-               <h3>Download Our App</h3>
-               <p>Dowload App for Android and ios mobile phone.</p>
-               <div class="app-logo">
-                   <img src="images/play-store.png">
-                   <img src="images/app-store.png">
-
-               </div>
-           </div>
-           <div class="footer-col-2">
-            <img src="images/logofooter.png">
-            <p>3T Store luôn là người đồng hành cùng bạn.<br>Địa chỉ: đường 3/2 trường ĐHCT khu II</p>
-        </div>
-    
-            <div class="footer-col-3">
-                <h3>Follow us</h3>
-                <ul>
-                    <li>Facebook</li>
-                    <li>Zalo</li>
-                    <li>Instagram</li>
-                    <li>TikTok</li>
-                </ul>
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Dowload App for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="images/play-store.png">
+                    <img src="images/app-store.png">
+ 
                 </div>
-       </div>
-       <hr>
-       <p class="copyright">Copyright 2022 - FDT GROUP</p>
-   </div>
-</div>
+            </div>
+            <div class="footer-col-2">
+             <img src="images/logofooter.png">
+             <p>3T Store luôn là người đồng hành cùng bạn.<br>Địa chỉ: đường 3/2 trường ĐHCT khu II</p>
+         </div>
+     
+             <div class="footer-col-3">
+                 <h3>Follow us</h3>
+                 <ul class="socials">
+                     <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                     <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                     <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                     <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                 </ul>
+                 </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2022 - FDT GROUP</p>
+        <a class="back" href="#backhome"><ion-icon name="arrow-up-outline"></ion-icon></a>
+    </div>
+ </div>
+<script src="sanpham1.js"></script>
 <script src="sanpham-detail-1.js"></script>
-<script>
-    var MenuItems = document.getElementById("MenuItems");
-    MenuItems.style.maxHeight= "0px";
-    function menutoggle(){
-        if(MenuItems.style.maxHeight== "0px"){
-         MenuItems.style.maxHeight= "200px"
-        }
-        else{
-         MenuItems.style.maxHeight= "0px";
-        }
-    }
-</script>
 </body>
 </html>

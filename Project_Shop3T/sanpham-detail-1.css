@@ -3,58 +3,74 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     font-family: 'Poppins', sans-serif;
- }
+}
+
 .navbar{
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 20px;
 }
+
 nav{
     flex: 1;
-    text-align: right;
 }
+
 nav ul{
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     list-style-type: none;
 }
+
 nav ul li{
-    display:inline-block;
-    margin-right: 20px;
+    margin-right: 10px;
 }
+
 a{
+    padding: 5px 10px;
+    border-radius: 10px;
     text-decoration: none;
     color: #555;
 }
+
 p{
     color: #555;
 }
+
 .container{
     max-width: 1300px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
 }
+
 .row{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .col-2{
     flex-basis: 50%;
     min-width: 300px;
 }
+
 .col-2 img{
     max-width: 100%;
     padding: 50px 0;
 }
+
 .col-2 h1{
     font-size: 50px;
     line-height: 60px;
     margin: 25px 0;
 }
+
 .btn{
     display:inline-block;
     background: #ff523b;
@@ -62,21 +78,99 @@ p{
     padding: 8px 30px;
     margin: 30px 0;
     border-radius: 30px;
-    transition: background 0.5s;
-
+    transition: background 0.5s; 
 }
+
 .btn:hover{
     background: #563434;
 }
+
 .header{
-    background: pink;
+    background: linear-gradient(to right, #40DFEF, #B4FF9F);
 }
+
 .header .row{ /*chua khoang trong cho hinh gio hang*/
     margin-top: 70px;
 }
+
 .nav_link:hover{
     color: #fff;
-    background-color: pink;
+    background-color: #111;
+}
+
+.header-toggle{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.5s;
+}
+
+/* Sau khi man hinh truot lon hon phan tu menu them class sticky vao navbar */
+.sticky{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 8%;
+    background: #f2f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+@media (max-width: 850px){
+    .sticky{
+        max-height: 70px;
+    }
+    .navbar{
+        justify-content: flex-end;
+    }
+
+    .logo{
+        margin-right: auto;
+    }
+
+    .navbar__menu{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: #f2f2f2f2;
+        width: 50%;
+        height: 100vh;
+        padding: 24px 0;
+        z-index: 100;
+        transition: 0.5s;
+        border-radius: 0 0 0 50%;
+        overflow: hidden;
+    }
+    
+    .header-toggle{
+        display: inline;
+    }
+    
+
+    #close{
+        position: absolute;
+        left: 30px;
+        font-size: 40px;
+    }
+   
+    .navbar__menu ul{
+        flex-direction: column;
+    }
+
+    .navbar__menu ul li{
+        margin-top: 30px;
+    }
+
+    .navbar__menu ul li a{
+        font-size: 18px;
+    }
+
+    .show{
+        right: 0;
+    }
 }
 /*---Chèn CSS của nội dung vào đây-----------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&family=Montserrat:wght@500&family=Quicksand:wght@400;600;700&display=swap');
@@ -308,9 +402,19 @@ p{
     .card__content{
         padding-top: 0;
     }
-
-
 }
+
+/* -----------------  LOADING --------------- */
+#preloader{
+    background: #fff url(images/product/loading.gif) no-repeat center center;
+    background-size: 70%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 300;
+}
+/* ----------------- END LOADING --------------- */
 /*---footer-----------------------*/
 
 .footer{
@@ -364,44 +468,20 @@ ul{
     text-align: center;
 }
 
-.menu-icon{
-    width: 28px;
-    margin-left: 20px;
-    display: none;
-}
-#MenuItems:hover{
+.back{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    font-size: 20px;
+    background: #000;
     color: #fff;
-    background-color: #FFB6C1;
 }
-@media only screen and (max-width: 800px){
-    nav ul{
-        position: absolute;
-        top: 80px;
-        right: 0;
-        background: #FFB6C1;
-        width: 40%;
-        overflow: hidden;
-        transition: max-height 0.5s;
-    }
-    nav ul li{
-        display: block;
-        margin-right: 30px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    nav ul li a{
-        color: #000;
-    }
-    .menu-icon{
-        display: block;
-        cursor: pointer;
-    }
+
+.socials li a{
+    font-size: 20px;
+    color: #fff;
 }
-@media only screen and (max-width: 600px){
-    .row{
-        text-align: center;
-    }
-    .col-2, .col-3, .col-4{
-        flex-basis: 100%;
-    }
+
+.socials li a:hover{
+    color: #40DFEF;
 }

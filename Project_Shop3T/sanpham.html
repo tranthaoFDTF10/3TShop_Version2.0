@@ -3,28 +3,27 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sản phẩm</title>
     <link rel="stylesheet" href="sanpham.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
+    <link rel="shortcut icon" href="images/product/3T-no-background.png" type="image/x-icon">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
     
 <body>
-    <div class="header">
+<header class="header" id="backhome">
     <div class="container">
-        <div class="navbar">
+        <div id="navbarr" class="navbar">
             <div class="logo">
-                <img src="images/logo3Tshop.png" width="125px">
-    
+                <img src="images/product/logo3Tshop-nobackground.png" width="125px">
             </div>
-            <nav>
-                <ul>
+            <nav class="navbar__menu" id="list-menu">
+                <ion-icon name="close-outline" class="header-toggle" id="close"></ion-icon>
+                <ul id="menu">
                     <li><a class="nav_link" href="index.html">Trang chủ</a></li>
                     <li><a class="nav_link" href="sanpham.html">Sản phẩm</a></li>
                     <li><a class="nav_link" href="gioithieu.html">Giới thiệu</a></li>
@@ -32,10 +31,15 @@
                     <li><a class="nav_link" href="taikhoan.html">Tài khoản</a></li>
                 </ul>
             </nav>
-            <img src="images/cart.png" width="30px" height="30px">
-            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
-
+            <ion-icon name="menu-outline" class="header-toggle" id="open"></ion-icon>
+            <!-- co sua chut -->
+            <a class="cart-add cart-add1" href="giohang.html" target="_blank">
+                <img src="images/cart.png" width="30px" height="30px">
+                <span class="count">0</span>
+            </a>
+            <!-- co sua chut -->
         </div>
+
         <div class="row">
             <div class="col-2">
                 <h2>3T Shop <br>Thời trang thể thao chính hãng</h2>
@@ -47,7 +51,7 @@
             </div>
         </div>
     </div>
-</div>
+</header>
 
 
 
@@ -127,45 +131,70 @@
     <div class="typical-product">
         <div class="typical-product__content">
             <h1>Sản phẩm tiêu biểu</h1>
-            <p>Dưới đây là các mẫu sản xuất bán chạy nhất của shop</p>
+            <p>Đây là một trong số các sản phẩm bán chạy nhất của shop. Với nhiều ưu điểm vượt trội từ thiết kế cho đến giá cả đã đem lại lợi thế lớn cho các mẫu sản phẩm này. Sản phẩm được đánh giá rất cao từ nhiều đối tượng sủ dụng.</p>
         </div>
-        <div class="typical-product__item slider-product">
-            <div class="slider-product__btn--prev">
-                <i class="fa fa-angle-left"></i>
-            </div>
-            <ul class="slider-product__dots">            
-                <li class="slider-product__dot__item active" data-index="0"></li>
-                <li class="slider-product__dot__item" data-index="1"></li>
-                <li class="slider-product__dot__item" data-index="2"></li>
-                <li class="slider-product__dot__item" data-index="3"></li>
-                <li class="slider-product__dot__item" data-index="4"></li>
-            </ul>
-            <div class="slider-product__wrapper">
-                <div class="slider-product__wrapper__main">
-                    <div class="slider-product__wrapper__main__item">
-                        <img src="images/product/shoe5.jpg" alt="">
-                    </div>
-                    <div class="slider-product__wrapper__main__item">
-                        <img src="images/product/shoe6.jpg" alt="">
-                    </div>
-                    <div class="slider-product__wrapper__main__item">
-                        <img src="images/product/shoe7.jpg" alt="">
-                    </div>
-                    <div class="slider-product__wrapper__main__item">
-                        <img src="images/product/shoe8.jpg" alt="">
-                    </div>
-                    <div class="slider-product__wrapper__main__item">
-                        <img src="images/product/shoe9.jpg" alt="">
-                    </div>
+        <div class="typical-product__item slider-img">
+            <div class="slider-img__slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+                <input type="radio" name="radio-btn" id="radio6">
+                <input type="radio" name="radio-btn" id="radio7">
+                <input type="radio" name="radio-btn" id="radio8">
+
+    
+                <div class="slider-img__slides__item first">
+                    <img src="images/product/shoe5.jpg" alt="">
+                </div>
+                <div class="slider-img__slides__item">
+                    <img src="images/product/shoe6.jpg" alt="">
+                </div>
+                <div class="slider-img__slides__item">
+                    <img src="images/product/shoe7.jpg" alt="">
+                </div>
+                <div class="slider-img__slides__item">
+                    <img src="images/product/shoe8.jpg" alt="">
+                </div>
+                <div class="slider-img__slides__item">
+                    <img src="images/product/shoe9.jpg" alt="">
+                </div>
+                <div class="slider-img__slides__item">
+                    <img src="images/product/shoe11.jpg" alt="">
+                </div>
+                <div class="slider-img__slides__item">
+                    <img src="images/product/shoe12.jpg" alt="">
+                </div>
+                <div class="slider-img__slides__item">
+                    <img src="images/product/shoe13.jpg" alt="">
+                </div>
+
+                <div class="slider-img__slides__autoplay">
+                    <div class="slider-img__autoplay__btn1"></div>
+                    <div class="slider-img__autoplay__btn2"></div>
+                    <div class="slider-img__autoplay__btn3"></div>
+                    <div class="slider-img__autoplay__btn4"></div>
+                    <div class="slider-img__autoplay__btn5"></div>
+                    <div class="slider-img__autoplay__btn6"></div>
+                    <div class="slider-img__autoplay__btn7"></div>
+                    <div class="slider-img__autoplay__btn8"></div>
                 </div>
             </div>
-            <div class="slider-product__btn--next">
-                <i class="fa fa-angle-right"></i>
+
+            <div class="slider-img__manual">
+                <label for="radio1" class="slider-img__manual__btn"></label>
+                <label for="radio2" class="slider-img__manual__btn"></label>
+                <label for="radio3" class="slider-img__manual__btn"></label>
+                <label for="radio4" class="slider-img__manual__btn"></label>
+                <label for="radio5" class="slider-img__manual__btn"></label>
+                <label for="radio6" class="slider-img__manual__btn"></label>
+                <label for="radio7" class="slider-img__manual__btn"></label>
+                <label for="radio8" class="slider-img__manual__btn"></label>
             </div>
         </div>
     </div>
 
-    
     <div class="all-product">
         <div class="all-product__content">
             <h1>Tất cả sản phẩm của shop</h1>
@@ -183,7 +212,7 @@
                     </div>
                     <ul class="menu-toggle__main-menu main-menu">
                         <li class="li">
-                            <div class="li1">
+                            <div class="li1"> 
                                 <span class="icon"><ion-icon name="airplane-outline"></ion-icon></span>
                                 <div class="bxtext">
                                     <div class="textt">Vận chuyển</div>
@@ -332,7 +361,6 @@
                                 </div>
                             </div>
                         </li>
-                        
                     </ul>
                 </div>
             </div>  
@@ -342,18 +370,18 @@
                     <div class="types__item__list">
                         <div class="box-product">
                             <div class="box-product__img">
-                                <img src="images/product/shoe1.jpg">
+                                <img class="linkimg" src="images/product/shoe1.jpg">
                                 <div class="link-buy">
                                     <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
-                                    <a href="#" class="buy-btn">Add to cart</a>
+                                    <div href="#" class="buy-btn add-cart">Add to cart</div>
                                 </div>
                             </div>
                             <div class="box-product__details details">
                                 <h4 class="details__name">Nike ATD4F</h4>
-                                <a href="#" class="details__flashsale">&#8363 1.500.000 lúc 00:00</a>
+                                <a href="#" class="details__flashsale"> 1.500.000&#8363 lúc 00:00</a>
                                 <div class="details__price">
-                                    <span class="last-price">&#8363 2.200.000</span>
-                                    <span class="new-price">&#8363 1.788.000</span>
+                                    <span class="last-price"> 2.200.000&#8363</span>
+                                    <span><span class="new-price">1.788.000</span>&#8363</span>
                                     <span><i class="fa fa-money" aria-hidden="true"></i></span>
                                 </div>
                                 <div class="details__feedback">
@@ -368,22 +396,23 @@
                                     <p>Đã bán 5,5k</p>
                                 </div>
                                 <div class="details__address">TP. Hồ Chí Minh</div>
+                                <div class="idsp" hidden>1</div>
                             </div>
                         </div>
                         <div class="box-product">
                             <div class="box-product__img">
-                                <img src="images/product/shoe2.jpg">
+                                <img class="linkimg" src="images/product/shoe2.jpg">
                                 <div class="link-buy">
                                     <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
-                                    <a href="#" class="buy-btn">Add to cart</a>
+                                    <div href="#" class="buy-btn add-cart">Add to cart</div>
                                 </div>
                             </div>
                             <div class="box-product__details details">
                                 <h4 class="details__name">Nike T5RUP</h4>
-                                <a href="#" class="details__flashsale">&#8363 1.000.000 lúc 00:00</a>
+                                <a href="#" class="details__flashsale"> 1.000.000&#8363 lúc 00:00</a>
                                 <div class="details__price">
-                                    <span class="last-price">&#8363 1.700.000</span>
-                                    <span class="new-price">&#8363 1.500.000</span>
+                                    <span class="last-price"> 1.700.000&#8363</span>
+                                    <span><span class="new-price">1.500.000</span>&#8363</span>
                                     <span><i class="fa fa-money" aria-hidden="true"></i></span>
                                 </div>
                                 <div class="details__feedback">
@@ -398,22 +427,23 @@
                                     <p>Đã bán 1,2k</p>
                                 </div>
                                 <div class="details__address">TP. Hồ Chí Minh</div>
+                                <div class="idsp" hidden>2</div>
                             </div>
                         </div>
-                        <div class="box-product hidden">
+                        <div class="box-product">
                             <div class="box-product__img">
-                                <img src="images/product/shoe3.jpg">
+                                <img class="linkimg" src="images/product/shoe3.jpg">
                                 <div class="link-buy">
                                     <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
-                                    <a href="#" class="buy-btn">Add to cart</a>
+                                    <div href="#" class="buy-btn add-cart">Add to cart</div>
                                 </div>
                             </div>
                             <div class="box-product__details details">
                                 <h4 class="details__name">Nike RT56IO</h4>
-                                <a href="#" class="details__flashsale">&#8363 1.200.000 lúc 00:00</a>
+                                <a href="#" class="details__flashsale"> 1.200.000&#8363 lúc 00:00</a>
                                 <div class="details__price">
-                                    <span class="last-price">&#8363 1.800.000</span>
-                                    <span class="new-price">&#8363 1.774.000</span>
+                                    <span class="last-price"> 1.800.000&#8363</span>
+                                    <span><span class="new-price">1.774.000</span>&#8363</span>
                                     <span><i class="fa fa-money" aria-hidden="true"></i></span>
                                 </div>
                                 <div class="details__feedback">
@@ -428,22 +458,23 @@
                                     <p>Đã bán 523</p>
                                 </div>
                                 <div class="details__address">TP. Hồ Chí Minh</div>
+                                <div class="idsp" hidden>3</div>
                             </div>
                         </div>
-                        <div class="box-product hidden">
+                        <div class="box-product">
                             <div class="box-product__img">
-                                <img src="images/product/shoe4.jpg">
+                                <img class="linkimg" src="images/product/shoe4.jpg">
                                 <div class="link-buy">
                                     <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
-                                    <a href="#" class="buy-btn">Add to cart</a>
+                                    <div href="#" class="buy-btn add-cart">Add to cart</div>
                                 </div>
                             </div>
                             <div class="box-product__details details">
                                 <h4 class="details__name">Nike MNI95</h4>
-                                <a href="#" class="details__flashsale">&#8363 1.400.000 lúc 00:00</a>
+                                <a href="#" class="details__flashsale"> 1.400.000&#8363 lúc 00:00</a>
                                 <div class="details__price">
-                                    <span class="last-price">&#8363 1.999.000</span>
-                                    <span class="new-price">&#8363 1.600.000</span>
+                                    <span class="last-price"> 1.999.000&#8363</span>
+                                    <span><span class="new-price">1.600.000</span>&#8363</span>
                                     <span><i class="fa fa-money" aria-hidden="true"></i></span>
                                 </div>
                                 <div class="details__feedback">
@@ -458,6 +489,7 @@
                                     <p>Đã bán 3,3k</p>
                                 </div>
                                 <div class="details__address">TP. Hồ Chí Minh</div>
+                                <div class="idsp" hidden>4</div>
                             </div>
                         </div>
                     </div>
@@ -471,18 +503,18 @@
                     <div class="types__item__list">
                         <div class="box-product">
                             <div class="box-product__img">
-                                <img src="images/product/sport_clothes1.jpg">
+                                <img class="linkimg" src="images/product/sport_clothes1.jpg">
                                 <div class="link-buy">
                                     <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
-                                    <a href="#" class="buy-btn">Add to cart</a>
+                                    <div href="#" class="buy-btn add-cart">Add to cart</div>
                                 </div>
                             </div>
                             <div class="box-product__details details">
                                 <h4 class="details__name">Áo thể thao nam TYUI</h4>
-                                <a href="#" class="details__flashsale">&#8363 450.000 lúc 00:00</a>
+                                <a href="#" class="details__flashsale"> 450.000&#8363 lúc 00:00</a>
                                 <div class="details__price">
-                                    <span class="last-price">&#8363 979.000</span>
-                                    <span class="new-price">&#8363 665.000</span>
+                                    <span class="last-price"> 979.000&#8363</span>
+                                    <span><span class="new-price">665.000</span>&#8363</span>
                                     <span><i class="fa fa-money" aria-hidden="true"></i></span>
                                 </div>
                                 <div class="details__feedback">
@@ -497,22 +529,23 @@
                                     <p>Đã bán 383</p>
                                 </div>
                                 <div class="details__address">Hà nội</div>
+                                <div class="idsp" hidden>5</div>
                             </div>
                         </div>
                         <div class="box-product">
                             <div class="box-product__img">
-                                <img src="images/product/sport_clothes2.jpg">
+                                <img class="linkimg" src="images/product/sport_clothes2.jpg">
                                 <div class="link-buy">
                                     <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
-                                    <a href="#" class="buy-btn">Add to cart</a>
+                                    <div href="#" class="buy-btn add-cart">Add to cart</div>
                                 </div>
                             </div>
                             <div class="box-product__details details">
                                 <h4 class="details__name">Quần áo thể thao TT</h4>
-                                <a href="#" class="details__flashsale">&#8363 800.000 lúc 00:00</a>
+                                <a href="#" class="details__flashsale"> 800.000&#8363 lúc 00:00</a>
                                 <div class="details__price">
-                                    <span class="last-price">&#8363 999.000</span>
-                                    <span class="new-price">&#8363 888.000</span>
+                                    <span class="last-price"> 999.000&#8363</span>
+                                    <span><span class="new-price">888.000</span>&#8363</span>
                                     <span><i class="fa fa-money" aria-hidden="true"></i></span>
                                 </div>
                                 <div class="details__feedback">
@@ -527,22 +560,23 @@
                                     <p>Đã bán 700</p>
                                 </div>
                                 <div class="details__address">TP. Hồ Chí Minh</div>
+                                <div class="idsp" hidden>6</div>
                             </div>
                         </div>
-                        <div class="box-product hidden">
+                        <div class="box-product">
                             <div class="box-product__img">
-                                <img src="images/product/sport_clothes3.jpg">
+                                <img class="linkimg" src="images/product/sport_clothes3.jpg">
                                 <div class="link-buy">
                                     <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
-                                    <a href="#" class="buy-btn">Add to cart</a>
+                                    <div href="#" class="buy-btn add-cart">Add to cart</div>
                                 </div>
                             </div>
                             <div class="box-product__details details">
-                                <h4 class="details__name">Áo quần thể thao nữ AWA</h4>
-                                <a href="#" class="details__flashsale">&#8363 900.000 lúc 00:00</a>
+                                <h4 class="details__name">Áo quần thể thao nữ WA</h4>
+                                <a href="#" class="details__flashsale"> 900.000&#8363 lúc 00:00</a>
                                 <div class="details__price">
-                                    <span class="last-price">&#8363 1.099.000</span>
-                                    <span class="new-price">&#8363 999.000</span>
+                                    <span class="last-price"> 1.099.000&#8363</span>
+                                    <span><span class="new-price">999.000</span>&#8363</span>
                                     <span><i class="fa fa-money" aria-hidden="true"></i></span>
                                 </div>
                                 <div class="details__feedback">
@@ -557,22 +591,23 @@
                                     <p>Đã bán 4,3k</p>
                                 </div>
                                 <div class="details__address">Đà Nẵng</div>
+                                <div class="idsp" hidden>7</div>
                             </div>
                         </div>
-                        <div class="box-product hidden">
+                        <div class="box-product">
                             <div class="box-product__img">
-                                <img src="images/product/sport_clothes4.jpg">
+                                <img class="linkimg" src="images/product/sport_clothes4.jpg">
                                 <div class="link-buy">
                                     <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
-                                    <a href="#" class="buy-btn">Add to cart</a>
+                                    <div href="#" class="buy-btn add-cart">Add to cart</div>
                                 </div>
                             </div>
                             <div class="box-product__details details">
                                 <h4 class="details__name">Quần áo thể thao nữ TRF</h4>
-                                <a href="#" class="details__flashsale">&#8363 780.000 lúc 00:00</a>
+                                <a href="#" class="details__flashsale"> 780.000&#8363 lúc 00:00</a>
                                 <div class="details__price">
-                                    <span class="last-price">&#8363 1.000.000</span>
-                                    <span class="new-price">&#8363 809.000</span>
+                                    <span class="last-price"> 1.000.000&#8363</span>
+                                    <span><span class="new-price">809.000</span>&#8363</span>
                                     <span><i class="fa fa-money" aria-hidden="true"></i></span>
                                 </div>
                                 <div class="details__feedback">
@@ -587,6 +622,7 @@
                                     <p>Đã bán 787</p>
                                 </div>
                                 <div class="details__address">TP. Hồ Chí Minh</div>
+                                <div class="idsp" hidden>7</div>
                             </div>
                         </div>
                     </div>
@@ -600,18 +636,18 @@
                     <div class="types__item__list">
                         <div class="box-product">
                             <div class="box-product__img">
-                                <img src="images/product/skirt5.jpg">
+                                <img class="linkimg" src="images/product/skirt5.jpg">
                                 <div class="link-buy">
                                     <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
-                                    <a href="#" class="buy-btn">Add to cart</a>
+                                    <div href="#" class="buy-btn add-cart">Add to cart</div>
                                 </div>
                             </div>
                             <div class="box-product__details details">
                                 <h4 class="details__name">Váy ngắn xếp KIO</h4>
-                                <a href="#" class="details__flashsale">&#8363 990.000 lúc 00:00</a>
+                                <a href="#" class="details__flashsale"> 990.000&#8363 lúc 00:00</a>
                                 <div class="details__price">
-                                    <span class="last-price">&#8363 1.309.000</span>
-                                    <span class="new-price">&#8363 1.000.000</span>
+                                    <span class="last-price"> 1.309.000&#8363</span>
+                                    <span><span class="new-price">1.000.000</span>&#8363</span>
                                     <span><i class="fa fa-money" aria-hidden="true"></i></span>
                                 </div>
                                 <div class="details__feedback">
@@ -626,22 +662,23 @@
                                     <p>Đã bán 583</p>
                                 </div>
                                 <div class="details__address">TP. Cần Thơ</div>
+                                <div class="idsp" hidden>9</div>
                             </div>
                         </div>
                         <div class="box-product">
                             <div class="box-product__img">
-                                <img src="images/product/skirt6.jpg">
+                                <img class="linkimg" src="images/product/skirt6.jpg">
                                 <div class="link-buy">
                                     <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
-                                    <a href="#" class="buy-btn">Add to cart</a>
+                                    <div href="#" class="buy-btn add-cart">Add to cart</div>
                                 </div>
                             </div>
                             <div class="box-product__details details">
                                 <h4 class="details__name">Váy công sở OUI</h4>
-                                <a href="#" class="details__flashsale">&#8363 750.000 lúc 00:00</a>
+                                <a href="#" class="details__flashsale"> 750.000&#8363 lúc 00:00</a>
                                 <div class="details__price">
-                                    <span class="last-price">&#8363 999.000</span>
-                                    <span class="new-price">&#8363 899.000</span>
+                                    <span class="last-price"> 999.000&#8363</span>
+                                    <span><span class="new-price">899.000</span>&#8363</span>
                                     <span><i class="fa fa-money" aria-hidden="true"></i></span>
                                 </div>
                                 <div class="details__feedback">
@@ -656,22 +693,23 @@
                                     <p>Đã bán 2,5k</p>
                                 </div>
                                 <div class="details__address">Hà nội</div>
+                                <div class="idsp" hidden>10</div>
                             </div>
                         </div>
-                        <div class="box-product hidden">
+                        <div class="box-product">
                             <div class="box-product__img">
-                                <img src="images/product/skirt7.jpg">
+                                <img class="linkimg" src="images/product/skirt7.jpg">
                                 <div class="link-buy">
                                     <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
-                                    <a href="#" class="buy-btn">Add to cart</a>
+                                    <div href="#" class="buy-btn add-cart">Add to cart</div>
                                 </div>
                             </div>
                             <div class="box-product__details details">
                                 <h4 class="details__name">Váy học sinh SCH</h4>
-                                <a href="#" class="details__flashsale">&#8363 550.000 lúc 00:00</a>
+                                <a href="#" class="details__flashsale"> 550.000&#8363 lúc 00:00</a>
                                 <div class="details__price">
-                                    <span class="last-price">&#8363 779.000</span>
-                                    <span class="new-price">&#8363 660.000</span>
+                                    <span class="last-price"> 779.000&#8363</span>
+                                    <span><span class="new-price">660.000</span>&#8363</span>
                                     <span><i class="fa fa-money" aria-hidden="true"></i></span>
                                 </div>
                                 <div class="details__feedback">
@@ -686,22 +724,23 @@
                                     <p>Đã bán 883</p>
                                 </div>
                                 <div class="details__address">TP. Hồ Chí Minh</div>
+                                <div class="idsp" hidden>11</div>
                             </div>
                         </div>
-                        <div class="box-product hidden">
+                        <div class="box-product">
                             <div class="box-product__img">
-                                <img src="images/product/skirt8.jpg">
+                                <img class="linkimg" src="images/product/skirt8.jpg">
                                 <div class="link-buy">
                                     <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
-                                    <a href="#" class="buy-btn">Add to cart</a>
+                                    <div href="#" class="buy-btn add-cart">Add to cart</div>
                                 </div>
                             </div>
                             <div class="box-product__details details">
-                                <h4 class="details__name">Váy ngắn phong cách UUP</h4>
-                                <a href="#" class="details__flashsale">&#8363 1.090.000 lúc 00:00</a>
+                                <h4 class="details__name">Váy ngắn UUP</h4>
+                                <a href="#" class="details__flashsale"> 1.090.000&#8363 lúc 00:00</a>
                                 <div class="details__price">
-                                    <span class="last-price">&#8363 1.879.000</span>
-                                    <span class="new-price">&#8363 1.321.000</span>
+                                    <span class="last-price"> 1.879.000&#8363</span>
+                                    <span><span class="new-price">1.321.000</span>&#8363</span>
                                     <span><i class="fa fa-money" aria-hidden="true"></i></span>
                                 </div>
                                 <div class="details__feedback">
@@ -716,6 +755,7 @@
                                     <p>Đã bán 990</p>
                                 </div>
                                 <div class="details__address">Hà nội</div>
+                                <div class="idsp" hidden>12</div>
                             </div>
                         </div>
                     </div>
@@ -729,18 +769,18 @@
                     <div class="types__item__list">
                         <div class="box-product">
                             <div class="box-product__img">
-                                <img src="images/product/coat5.jpeg">
+                                <img class="linkimg" src="images/product/coat5.jpeg">
                                 <div class="link-buy">
                                     <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
-                                    <a href="#" class="buy-btn">Add to cart</a>
+                                    <div href="#" class="buy-btn add-cart">Add to cart</div>
                                 </div>
                             </div>
                             <div class="box-product__details details">
                                 <h4 class="details__name">Áo khoác 089</h4>
-                                <a href="#" class="details__flashsale">&#8363 590.000 lúc 00:00</a>
+                                <a href="#" class="details__flashsale"> 590.000&#8363 lúc 00:00</a>
                                 <div class="details__price">
-                                    <span class="last-price">&#8363 879.000</span>
-                                    <span class="new-price">&#8363 661.000</span>
+                                    <span class="last-price"> 879.000&#8363</span>
+                                    <span><span class="new-price">661.000</span>&#8363</span>
                                     <span><i class="fa fa-money" aria-hidden="true"></i></span>
                                 </div>
                                 <div class="details__feedback">
@@ -755,22 +795,23 @@
                                     <p>Đã bán 777</p>
                                 </div>
                                 <div class="details__address">Đà Nẵng</div>
+                                <div class="idsp" hidden>13</div>
                             </div>
                         </div>
                         <div class="box-product">
                             <div class="box-product__img">
-                                <img src="images/product/coat6.jpg">
+                                <img class="linkimg" src="images/product/coat6.jpg">
                                 <div class="link-buy">
                                     <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
-                                    <a href="#" class="buy-btn">Add to cart</a>
+                                    <div href="#" class="buy-btn add-cart">Add to cart</div>
                                 </div>
                             </div>
                             <div class="box-product__details details">
                                 <h4 class="details__name">Áo khoác KRA</h4>
-                                <a href="#" class="details__flashsale">&#8363 1.000.000 lúc 00:00</a>
+                                <a href="#" class="details__flashsale"> 1.000.000&#8363 lúc 00:00</a>
                                 <div class="details__price">
-                                    <span class="last-price">&#8363 1.809.000</span>
-                                    <span class="new-price">&#8363 1.355.000</span>
+                                    <span class="last-price"> 1.809.000&#8363</span>
+                                    <span><span class="new-price">1.355.000</span>&#8363</span>
                                     <span><i class="fa fa-money" aria-hidden="true"></i></span>
                                 </div>
                                 <div class="details__feedback">
@@ -785,22 +826,23 @@
                                     <p>Đã bán 1,7k</p>
                                 </div>
                                 <div class="details__address">Hà nội</div>
+                                <div class="idsp" hidden>14</div>
                             </div>
                         </div>
-                        <div class="box-product hidden">
-                            <div class="box-product__img hidden">
-                                <img src="images/product/coat7.jpg">
+                        <div class="box-product">
+                            <div class="box-product__img">
+                                <img class="linkimg" src="images/product/coat7.jpg">
                                 <div class="link-buy">
                                     <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
-                                    <a href="#" class="buy-btn">Add to cart</a>
+                                    <div href="#" class="buy-btn add-cart">Add to cart</div>
                                 </div>
                             </div>
                             <div class="box-product__details details">
                                 <h4 class="details__name">Áo khoác DVN</h4>
-                                <a href="#" class="details__flashsale">&#8363 600.000 lúc 00:00</a>
+                                <a href="#" class="details__flashsale"> 600.000&#8363 lúc 00:00</a>
                                 <div class="details__price">
-                                    <span class="last-price">&#8363 879.000</span>
-                                    <span class="new-price">&#8363 721.000</span>
+                                    <span class="last-price"> 879.000&#8363</span>
+                                    <span><span class="new-price">721.000</span>&#8363</span>
                                     <span><i class="fa fa-money" aria-hidden="true"></i></span>
                                 </div>
                                 <div class="details__feedback">
@@ -815,22 +857,23 @@
                                     <p>Đã bán 1.9k</p>
                                 </div>
                                 <div class="details__address">TP. Hồ Chí Minh</div>
+                                <div class="idsp" hidden>15</div>
                             </div>
                         </div>
-                        <div class="box-product hidden">
+                        <div class="box-product">
                             <div class="box-product__img">
-                                <img src="images/product/coat8.jpeg">
+                                <img class="linkimg" src="images/product/coat8.jpeg">
                                 <div class="link-buy">
                                     <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
-                                    <a href="#" class="buy-btn">Add to cart</a>
+                                    <div href="#" class="buy-btn add-cart">Add to cart</div>
                                 </div>
                             </div>
                             <div class="box-product__details details">
                                 <h4 class="details__name">Áo Khoác NTDT</h4>
-                                <a href="#" class="details__flashsale">&#8363 1.070.000 lúc 00:00</a>
+                                <a href="#" class="details__flashsale"> 1.070.000&#8363 lúc 00:00</a>
                                 <div class="details__price">
-                                    <span class="last-price">&#8363 1.479.000</span>
-                                    <span class="new-price">&#8363 1.321.000</span>
+                                    <span class="last-price"> 1.479.000&#8363</span>
+                                    <span><span class="new-price">1.321.000</span>&#8363</span>
                                     <span><i class="fa fa-money" aria-hidden="true"></i></span>
                                 </div>
                                 <div class="details__feedback">
@@ -845,6 +888,7 @@
                                     <p>Đã bán 3,3k</p>
                                 </div>
                                 <div class="details__address">Tây Nguyên</div>
+                                <div class="idsp" hidden>16</div>
                             </div>
                         </div>
                     </div>
@@ -858,18 +902,18 @@
                     <div class="types__item__list">
                         <div class="box-product">
                             <div class="box-product__img">
-                                <img src="images/product/t-shirt1.jpg">
+                                <img class="linkimg" src="images/product/t-shirt1.jpg">
                                 <div class="link-buy">
                                     <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
-                                    <a href="#" class="buy-btn">Add to cart</a>
+                                    <div href="#" class="buy-btn add-cart">Add to cart</div>
                                 </div>
                             </div>
                             <div class="box-product__details details">
                                 <h4 class="details__name">Áo Thun TNT</h4>
-                                <a href="#" class="details__flashsale">&#8363 470.000 lúc 00:00</a>
+                                <a href="#" class="details__flashsale"> 470.000&#8363 lúc 00:00</a>
                                 <div class="details__price">
-                                    <span class="last-price">&#8363 679.000</span>
-                                    <span class="new-price">&#8363 521.000</span>
+                                    <span class="last-price"> 679.000&#8363</span>
+                                    <span><span class="new-price">521.000</span>&#8363</span>
                                     <span><i class="fa fa-money" aria-hidden="true"></i></span>
                                 </div>
                                 <div class="details__feedback">
@@ -884,22 +928,23 @@
                                     <p>Đã bán 1,3k</p>
                                 </div>
                                 <div class="details__address">Hà Nội</div>
+                                <div class="idsp" hidden>17</div>
                             </div>
                         </div>
                         <div class="box-product">
                             <div class="box-product__img">
-                                <img src="images/product/t-shirt2.jpg">
+                                <img class="linkimg" src="images/product/t-shirt2.jpg">
                                 <div class="link-buy">
                                     <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
-                                    <a href="#" class="buy-btn">Add to cart</a>
+                                    <div href="#" class="buy-btn add-cart">Add to cart</div>
                                 </div>
                             </div>
                             <div class="box-product__details details">
                                 <h4 class="details__name">Áo Thun VTO</h4>
-                                <a href="#" class="details__flashsale">&#8363 1.066.000 lúc 00:00</a>
+                                <a href="#" class="details__flashsale"> 1.066.000&#8363 lúc 00:00</a>
                                 <div class="details__price">
-                                    <span class="last-price">&#8363 1.666.000</span>
-                                    <span class="new-price">&#8363 1.333.000</span>
+                                    <span class="last-price"> 1.666.000&#8363</span>
+                                    <span><span class="new-price">1.333.000</span>&#8363</span>
                                     <span><i class="fa fa-money" aria-hidden="true"></i></span>
                                 </div>
                                 <div class="details__feedback">
@@ -914,22 +959,23 @@
                                     <p>Đã bán 5,3k</p>
                                 </div>
                                 <div class="details__address">TP Hồ Chí Minh</div>
+                                <div class="idsp" hidden>18</div>
                             </div>
                         </div>
-                        <div class="box-product hidden">
+                        <div class="box-product">
                             <div class="box-product__img">
-                                <img src="images/product/t-shirt3.jpg">
+                                <img class="linkimg" src="images/product/t-shirt3.jpg">
                                 <div class="link-buy">
                                     <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
-                                    <a href="#" class="buy-btn">Add to cart</a>
+                                    <div href="#" class="buy-btn add-cart">Add to cart</div>
                                 </div>
                             </div>
                             <div class="box-product__details details">
                                 <h4 class="details__name">Áo Thun NMH</h4>
-                                <a href="#" class="details__flashsale">&#8363 440.000 lúc 00:00</a>
+                                <a href="#" class="details__flashsale"> 440.000&#8363 lúc 00:00</a>
                                 <div class="details__price">
-                                    <span class="last-price">&#8363 579.000</span>
-                                    <span class="new-price">&#8363 501.000</span>
+                                    <span class="last-price"> 579.000&#8363</span>
+                                    <span><span class="new-price">501.000</span>&#8363</span>
                                     <span><i class="fa fa-money" aria-hidden="true"></i></span>
                                 </div>
                                 <div class="details__feedback">
@@ -944,22 +990,23 @@
                                     <p>Đã bán 783</p>
                                 </div>
                                 <div class="details__address">TP Hồ Chí Minh</div>
+                                <div class="idsp" hidden>19</div>
                             </div>
                         </div>
-                        <div class="box-product hidden">
+                        <div class="box-product">
                             <div class="box-product__img">
-                                <img src="images/product/t-shirt4.jpg">
+                                <img class="linkimg" src="images/product/t-shirt4.jpg">
                                 <div class="link-buy">
                                     <a href="sanpham-detail-1.html" class="buy-btn">See details</a>
-                                    <a href="#" class="buy-btn">Add to cart</a>
+                                    <div href="#" class="buy-btn add-cart">Add to cart</div>
                                 </div>
                             </div>
                             <div class="box-product__details details">
                                 <h4 class="details__name">Áo Thun TTK</h4>
-                                <a href="#" class="details__flashsale">&#8363 470.000 lúc 00:00</a>
+                                <a href="#" class="details__flashsale"> 470.000&#8363 lúc 00:00</a>
                                 <div class="details__price">
-                                    <span class="last-price">&#8363 679.000</span>
-                                    <span class="new-price">&#8363 521.000</span>
+                                    <span class="last-price"> 679.000&#8363</span>
+                                    <span><span class="new-price">521.000</span>&#8363</span>
                                     <span><i class="fa fa-money" aria-hidden="true"></i></span>
                                 </div>
                                 <div class="details__feedback">
@@ -974,19 +1021,63 @@
                                     <p>Đã bán 713</p>
                                 </div>
                                 <div class="details__address">Đà Nẵng</div>
+                                <div class="idsp" hidden>20</div>
                             </div>
                         </div>
                     </div>
                     <div class="types-item__more-information">
                         <a href="see-more-skirt.html" class="buy-btn">Xem thêm</a>
                     </div>
-                </div>
-
-                
+                </div> 
             </div>         
         </div>
         
     </div>
+
+    <!-- loading -->
+    <div id="preloader"></div>
+    <iframe hidden width="560" height="315" src="https://www.youtube.com/embed/BZK3R_qhw_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!--end loading -->
+
+    <!-- comemnt -->
+    <div class="testimonials">
+        <h1>Những người khách hàng suy nghĩ gì về chúng tôi ??</h1>
+        <p>Dưới đây là những lời chia sẽ chân thật từ những khách hàng đã mua sản phẩm từ chúng tôi. Chúng tôi luôn luôn đón nhận mọi ý kiến của khách hàng.</p>
+        <div class="testimonials__comment">
+            <div class="testimonials__comment__details">
+                <img src="images/testimonials1.jpg" alt="testimonials">
+                <div>
+                    <p>Mình đã mua hàng ở đây rất nhiều lần và lần nào cũng rất hài lòng về shop. Từ thái độ phục vụ tôn trọng khách hàng đến việc tư vấn nhiệt tình cho mình. Điều đó tạo cho mình cảm giác thoải mái mình rất thích mua hàng ở đây.</p>
+                    <h3>Kei Nguyễn</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </div>
+            <div class="testimonials__comment__details">
+                <img src="images/testimonials2.jpg" alt="testimonials">
+                <div>
+                    <p>Lần đầu mua hàng nhưng mình rất bất ngờ với thái độ phục vụ ở đây. Tư vấn nhiệt tình dễ thương lắm. Shop lại có nhiều sản phẩm mẫu mã đang dạng mà rất chất lượng luôn. Giá cả lại họp lý. Mình rất hài lòng và sẽ quay lại nhiều lần.</p>
+                    <h3>Sarah Trần</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end comment -->
+
+    <!-- contact -->
+    <div class="cta">
+        <h1>Đăng ký tài khoản với chúng tôi để nhận ưu đãi ngay</h1>
+        <a href="#" class="cta-btn buy-btn">Đăng ký ngay</a>
+    </div>
+    <!-- end contact -->
 </main>
 
 
@@ -1010,30 +1101,21 @@
     
             <div class="footer-col-3">
                 <h3>Follow us</h3>
-                <ul>
-                    <li>Facebook</li>
-                    <li>Zalo</li>
-                    <li>Instagram</li>
-                    <li>TikTok</li>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                 </ul>
                 </div>
        </div>
        <hr>
        <p class="copyright">Copyright 2022 - FDT GROUP</p>
+       <a class="back" href="#backhome"><ion-icon name="arrow-up-outline"></ion-icon></a>
    </div>
 </div>
 <script src="sanpham.js"></script>
-<script>
-    var MenuItems = document.getElementById("MenuItems");
-    MenuItems.style.maxHeight= "0px";
-    function menutoggle(){
-        if(MenuItems.style.maxHeight== "0px"){
-         MenuItems.style.maxHeight= "200px"
-        }
-        else{
-         MenuItems.style.maxHeight= "0px";
-        }
-    }
-</script>
+<script src="sanpham1.js"></script>
+<script src="test.js"></script>
 </body>
 </html>
